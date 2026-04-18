@@ -160,13 +160,13 @@ Download or extract the datasets into the `data/` folder following the structure
 
 ```
 ┌──────────────┐     ┌──────────────────┐     ┌─────────────────┐
-│  Raw Data     │     │  Preprocessing   │     │  Training       │
-│  (JSON + PNG) │────▶│  (Notebooks)     │────▶│  (Ultralytics)  │
+│  Raw Data    │     │  Preprocessing   │     │  Training       │
+│  (JSON + PNG)│────▶│  (Notebooks)    │────▶│  (Ultralytics) │
 └──────────────┘     └──────────────────┘     └────────┬────────┘
                                                        │
                                                        ▼
                      ┌──────────────────┐     ┌─────────────────┐
-                     │  Streamlit UI    │◀────│  Inference       │
+                     │  Streamlit UI    │◀────│  Inference      │
                      │  (Upload + View) │     │  (YOLOv8-seg)   │
                      └──────────────────┘     └─────────────────┘
                                                        │
