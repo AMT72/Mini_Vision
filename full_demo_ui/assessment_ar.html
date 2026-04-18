@@ -1,259 +1,68 @@
-<!DOCTYPE html><html dir="rtl" lang="ar"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>نظام تقييم الأضرار - إدخال البيانات المرئية</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-tertiary-container": "#ffffff",
-                        "tertiary-container": "#747575",
-                        "surface-tint": "#5e5e5e",
-                        "outline-variant": "#c6c6c6",
-                        "surface-container-low": "#f3f3f5",
-                        "primary-fixed-dim": "#474747",
-                        "secondary-container": "#d0d5dd",
-                        "surface-variant": "#e2e2e4",
-                        "secondary-fixed-dim": "#a7abb4",
-                        "on-surface-variant": "#474747",
-                        "on-secondary-container": "#171c22",
-                        "on-tertiary-fixed": "#ffffff",
-                        "on-error": "#ffffff",
-                        "surface-container": "#eeeef0",
-                        "surface-container-high": "#e8e8ea",
-                        "inverse-surface": "#2f3132",
-                        "inverse-on-surface": "#f0f0f2",
-                        "surface-dim": "#d9dadc",
-                        "error": "#ba1a1a",
-                        "on-error-container": "#410002",
-                        "tertiary-fixed-dim": "#454747",
-                        "surface-bright": "#f9f9fb",
-                        "on-tertiary": "#e2e2e2",
-                        "on-primary-container": "#ffffff",
-                        "inverse-primary": "#c6c6c6",
-                        "on-surface": "#1a1c1d",
-                        "error-container": "#ffdad6",
-                        "primary": "#000000",
-                        "surface-container-highest": "#e2e2e4",
-                        "on-secondary-fixed": "#171c22",
-                        "on-primary-fixed-variant": "#e2e2e2",
-                        "tertiary": "#3a3c3c",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-fixed": "#c2c7cf",
-                        "primary-container": "#3b3b3b",
-                        "outline": "#777777",
-                        "on-secondary": "#ffffff",
-                        "background": "#f9f9fb",
-                        "surface": "#f9f9fb",
-                        "on-tertiary-fixed-variant": "#e2e2e2",
-                        "on-primary-fixed": "#ffffff",
-                        "on-secondary-fixed-variant": "#373c43",
-                        "on-background": "#1a1c1d",
-                        "on-primary": "#e2e2e2",
-                        "secondary": "#5a5f66",
-                        "primary-fixed": "#5e5e5e",
-                        "tertiary-fixed": "#5d5e5f"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "fontFamily": {
-                        "headline": ["Space Grotesk", "Inter"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    }
-                },
-            }
-        }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; background-color: #f9f9fb; }
-        .font-space-grotesk { font-family: 'Space Grotesk', sans-serif; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .glass-panel { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
-        .tonal-shift { transition: background-color 0.2s ease; }
-    </style>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini_Vision - رفع الصور</title>
+    <link rel="stylesheet" href="../demo_ui/css/style.css">
 </head>
-<body class="bg-background text-on-background">
-<!-- Top Navigation -->
-<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
-<div class="flex flex-row-reverse justify-between items-center w-full px-6 py-4 max-w-full mx-auto">
-<div class="text-xl font-bold tracking-tighter text-zinc-900 dark:text-zinc-50 font-space-grotesk" style="">
-                نظام تقييم الأضرار
+<body>
+    <a href="assessment_en.html" class="lang-switch label-md">English</a>
+
+    <!-- Navigation Breadcrumbs -->
+    <div style="padding: 2rem 2rem 0; width: 100%; max-width: 1200px; margin: 0 auto; display: flex; gap: 2rem;">
+        <a href="index_ar.html" class="label-md" style="color:#777777;">&larr; العودة للرئيسية</a>
+    </div>
+
+    <div class="container hero" style="min-height: 70vh;">
+        <h1 class="display-lg" style="font-size: 3rem;">رفع الصور</h1>
+        <p class="body-lg mb-4">الخطوة الأولى في عملية التقييم الذكي. اختر مصدر الصورة.</p>
+        
+        <div class="upload-area" id="upload-trigger">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 1rem;">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+            </svg>
+            <h3 style="margin-bottom: 0.5rem;">قم بسحب وإسقاط الصور هنا</h3>
+            <p style="color: #747575;">أو اضغط للاختيار من المعرض للبدء</p>
+        </div>
+
+        <div class="card ghost-border" style="display:flex; gap:2rem; align-items:flex-start; flex-wrap:wrap;">
+            <div style="flex:1; min-width:300px;">
+                <h4 class="label-md mb-2">تعليمات التصوير</h4>
+                <div class="grid-3" style="grid-template-columns: 1fr;">
+                    <div style="margin-bottom:1rem;">
+                        <strong>الإضاءة المثالية</strong>
+                        <p style="font-size: 0.9rem; color: #5a5f66;">تأكد من الإضاءة الجيدة/الطبيعية للحصول على أفضل النتائج.</p>
+                    </div>
+                    <div style="margin-bottom:1rem;">
+                        <strong>زاوية التحليل</strong>
+                        <p style="font-size: 0.9rem; color: #5a5f66;">التقط الصورة بزاوية 45 درجة لتحليل هيكلي دقيق.</p>
+                    </div>
+                    <div>
+                        <strong>تجنب الانعكاس</strong>
+                        <p style="font-size: 0.9rem; color: #5a5f66;">تجنب الوهج المباشر أو الظلال القوية التي قد تخفي التفاصيل.</p>
+                    </div>
+                </div>
             </div>
-<nav class="hidden md:flex flex-row-reverse gap-8 items-center font-space-grotesk tracking-tight">
-<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors" href="#" style="">التقنية</a>
-<a class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors" href="#" style="">الدعم</a>
-</nav>
-<div class="flex items-center gap-4">
-<button class="material-symbols-outlined text-zinc-900 dark:text-zinc-50 active:scale-95 duration-150" style="">language</button>
-</div>
-</div>
-<div class="bg-zinc-100 dark:bg-zinc-900 h-[1px]"></div>
-</header>
-<!-- Sidebar Navigation -->
-<aside class="h-screen w-64 fixed right-0 border-l border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 hidden md:block z-40">
-<div class="flex flex-col h-full gap-2 p-4 pt-24 font-space-grotesk text-right">
-<!-- Profile Header -->
-<div class="flex flex-row-reverse items-center gap-3 px-4 mb-6">
-<div class="w-10 h-10 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="professional profile portrait of a technician in a modern studio environment with neutral grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSTv9v5N2s_a3RwxsGnS9AXNqEV0AdNzp-ZUVXLouhvtha1E8d7XYmAJhWRjZLk9H6nIiEMDfFHUcBfK0HRgO5EBn35BgKh7T_Hl0PjmnoZ34SZp9m1eepXynGcQHL0LythZhUm5k8h9OoapBfhFWtc3Dim3PLfMltwtk5iY3HPAFxJABJ0zPQxazLDmNF2hPne19LtK_s7BfVvOxYUvrNLKFrUZeDpmhyvEUi8xqhLDKNJS768Zey10zNbPUyGkrHNtnOM4-RuAhD" style="">
-</div>
-<div class="flex flex-col items-end">
-<span class="text-sm font-black text-zinc-900" style="">لوحة التحكم</span>
-<span class="text-xs text-zinc-500" style="">مثال@نطاق.كوم</span>
-</div>
-</div>
-<!-- Nav Items -->
-<a class="flex flex-row-reverse items-center gap-3 bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-50 rounded-md p-3 px-4 transition-all active:scale-[0.98]" href="#" style="">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">photo_camera</span>
-<span class="font-semibold" style="">إدخال البيانات المرئية</span>
-</a>
-<a class="flex flex-row-reverse items-center gap-3 text-zinc-500 dark:text-zinc-400 p-3 px-4 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all hover:translate-x-[-4px]" href="#" style="">
-<span class="material-symbols-outlined" style="">memory</span>
-<span class="" style="">المعالجة</span>
-</a>
-<a class="flex flex-row-reverse items-center gap-3 text-zinc-500 dark:text-zinc-400 p-3 px-4 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all hover:translate-x-[-4px]" href="#" style="">
-<span class="material-symbols-outlined" style="">description</span>
-<span class="" style="">تقرير التقييم</span>
-</a>
-</div>
-</aside>
-<!-- Main Content Canvas -->
-<main class="md:pr-64 pt-20 min-h-screen">
-<div class="max-w-6xl mx-auto p-8">
-<!-- Stepper Asymmetric Header -->
-<div class="flex flex-col md:flex-row-reverse justify-between items-end mb-12 gap-6">
-<div class="text-right">
-<h1 class="text-5xl font-bold font-space-grotesk tracking-tighter mb-2 text-primary" style="">رفع الصور</h1>
-<p class="text-secondary text-lg" style="">الخطوة الأولى في عملية التقييم الذكي</p>
-</div>
-<div class="flex flex-row-reverse items-center gap-4">
-<div class="flex flex-col items-center">
-<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold" style="">1</div>
-<span class="text-[10px] mt-1 font-bold uppercase tracking-tighter" style="">المدخلات</span>
-</div>
-<div class="w-12 h-[2px] bg-surface-container-highest mb-4"></div>
-<div class="flex flex-col items-center">
-<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-outline font-bold" style="">2</div>
-<span class="text-[10px] mt-1 font-bold uppercase tracking-tighter text-outline" style="">المعالجة</span>
-</div>
-<div class="w-12 h-[2px] bg-surface-container-highest mb-4"></div>
-<div class="flex flex-col items-center">
-<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-outline font-bold" style="">3</div>
-<span class="text-[10px] mt-1 font-bold uppercase tracking-tighter text-outline" style="">التقرير</span>
-</div>
-</div>
-</div>
-<!-- Bento Grid Content -->
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-<!-- Main Upload Area -->
-<div class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 shadow-sm flex flex-col items-center justify-center min-h-[400px] border border-transparent hover:border-outline-variant/20 transition-all group">
-<div class="w-24 h-24 rounded-full bg-surface-container-low flex items-center justify-center mb-6 group-hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined text-4xl text-primary" style="">add_a_photo</span>
-</div>
-<h3 class="text-2xl font-bold mb-4 font-space-grotesk" style="">اختر مصدر الصورة</h3>
-<p class="text-secondary text-center max-w-sm mb-8" style="">قم بسحب وإسقاط الصور هنا أو اختر من المعرض للبدء</p>
-<div class="flex gap-4">
-<button class="px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-md font-medium active:scale-95 transition-all flex items-center gap-2" style="">
-<span class="material-symbols-outlined text-sm" style="">upload_file</span>
-                            رفع ملف
-                        </button>
-<button class="px-8 py-3 bg-surface-container-highest text-primary rounded-md font-medium active:scale-95 transition-all flex items-center gap-2" style="">
-<span class="material-symbols-outlined text-sm" style="">photo_camera</span>
-                            التقاط مباشر
-                        </button>
-</div>
-</div>
-<!-- Guidelines Sidebar (Tonal Shifted) -->
-<div class="md:col-span-4 flex flex-col gap-6">
-<div class="bg-surface-container-low p-6 rounded-xl flex flex-col gap-6">
-<h4 class="text-sm font-bold uppercase tracking-widest text-primary-fixed mb-2" style="">تعليمات التصوير</h4>
-<div class="flex flex-row-reverse gap-4">
-<div class="p-2 h-fit bg-surface-container-lowest rounded">
-<span class="material-symbols-outlined text-primary" style="">light_mode</span>
-</div>
-<div class="text-right">
-<p class="text-sm font-bold mb-1" style="">الإضاءة المثالية</p>
-<p class="text-xs text-secondary leading-relaxed" style="">تأكد من الإضاءة الجيدة/الطبيعية للحصول على أفضل النتائج.</p>
-</div>
-</div>
-<div class="flex flex-row-reverse gap-4">
-<div class="p-2 h-fit bg-surface-container-lowest rounded">
-<span class="material-symbols-outlined text-primary" style="">architecture</span>
-</div>
-<div class="text-right">
-<p class="text-sm font-bold mb-1" style="">زاوية التحليل</p>
-<p class="text-xs text-secondary leading-relaxed" style="">التقط الصورة بزاوية 45 درجة لتحليل هيكلي دقيق.</p>
-</div>
-</div>
-<div class="flex flex-row-reverse gap-4">
-<div class="p-2 h-fit bg-surface-container-lowest rounded">
-<span class="material-symbols-outlined text-primary" style="">vignette</span>
-</div>
-<div class="text-right">
-<p class="text-sm font-bold mb-1" style="">تجنب الانعكاس</p>
-<p class="text-xs text-secondary leading-relaxed" style="">تجنب الوهج المباشر أو الظلال القوية التي قد تخفي التفاصيل.</p>
-</div>
-</div>
-</div>
-<!-- Visual Example Card -->
-<div class="relative rounded-xl overflow-hidden aspect-video group">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="high-angle studio shot of a luxury black car side profile with clean dramatic lighting highlighting the door panels and wheels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1c8WGZT2LiSyKTE3GhJnYCLAS6prZSFvPSvRAdawwBgRCv4H69QSon5OaVmf4MyiB0lJEG6NbwcilnGtg2U-nKKy4af8Hj7N2agH7WgybYc9-GSRyhxhRlSgeQguJMiZxAJo9J2NboWyrIADyVIiWdpoOfIznEHATU1b-XHow6zmd1lJpub9MDM4JILsUJ9KMrHETcx8xeLrSUoicKbetQyetUi9xg-71EXZytPv_3T2f0Y8jeEvmLSofakVaLvlXWXRuA_Syzq_q" style="">
-<div class="absolute inset-0 bg-primary/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-<span class="bg-surface-container-lowest/90 px-3 py-1 rounded-sm text-[10px] font-bold uppercase" style="">مثال الزاوية المثالية</span>
-</div>
-</div>
-</div>
-</div>
-<!-- Bottom Navigation Actions -->
-<div class="mt-12 flex flex-row-reverse justify-between items-center py-6 border-t border-surface-container-high">
-<button class="px-10 py-4 bg-primary text-on-primary rounded-md font-bold text-lg active:scale-95 transition-all flex items-center gap-4" style="">
-                    بدء المعالجة
-                    <span class="material-symbols-outlined" style="">arrow_back</span>
-</button>
-<div class="flex items-center gap-2 text-secondary">
-<span class="material-symbols-outlined text-sm" style="">verified</span>
-<span class="text-xs font-medium" style="">البيانات مشفرة وآمنة بنسبة 100%</span>
-</div>
-</div>
-</div>
-</main>
-<!-- Footer Component -->
-<footer class="w-full py-8 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 mt-auto">
-<div class="flex flex-row-reverse justify-between items-center px-12 w-full max-w-7xl mx-auto">
-<span class="text-zinc-600 dark:text-zinc-400 text-xs font-medium uppercase tracking-widest" style="">© ٢٠٢٤ نظام تقييم الأضرار. جميع الحقوق محفوظة.</span>
-<div class="flex flex-row-reverse gap-8 text-xs font-medium uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
-<a class="hover:text-zinc-900 dark:hover:text-zinc-100 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#" style="">الخصوصية</a>
-<a class="hover:text-zinc-900 dark:hover:text-zinc-100 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#" style="">الشروط</a>
-<a class="hover:text-zinc-900 dark:hover:text-zinc-100 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100" href="#" style="">اتصل بنا</a>
-</div>
-</div>
-</footer>
-<!-- Bottom Nav Bar (Mobile Only) -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 glass-panel border-t border-surface-container-high px-6 py-4 z-50">
-<div class="flex flex-row-reverse justify-around items-center">
-<a class="flex flex-col items-center gap-1 text-primary" href="#" style="">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">photo_camera</span>
-<span class="text-[10px] font-bold" style="">المدخلات</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-outline" href="#" style="">
-<span class="material-symbols-outlined" style="">memory</span>
-<span class="text-[10px] font-bold" style="">المعالجة</span>
-</a>
-<a class="flex flex-col items-center gap-1 text-outline" href="#" style="">
-<span class="material-symbols-outlined" style="">description</span>
-<span class="text-[10px] font-bold" style="">التقرير</span>
-</a>
-</div>
-</nav>
-</body></html>
+            <div style="flex:1; min-width:300px;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1c8WGZT2LiSyKTE3GhJnYCLAS6prZSFvPSvRAdawwBgRCv4H69QSon5OaVmf4MyiB0lJEG6NbwcilnGtg2U-nKKy4af8Hj7N2agH7WgybYc9-GSRyhxhRlSgeQguJMiZxAJo9J2NboWyrIADyVIiWdpoOfIznEHATU1b-XHow6zmd1lJpub9MDM4JILsUJ9KMrHETcx8xeLrSUoicKbetQyetUi9xg-71EXZytPv_3T2f0Y8jeEvmLSofakVaLvlXWXRuA_Syzq_q" alt="Example Camera Angle" style="width:100%; border-radius:var(--radius-sm); object-fit:cover;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="display-lg" style="font-size: 2rem;">جاري المعالجة والتحليل...</div>
+        <p class="body-lg">يتم الآن فحص الأضرار بواسطة الذكاء الاصطناعي</p>
+    </div>
+
+    <script>
+        document.getElementById('upload-trigger').addEventListener('click', () => {
+            document.getElementById('loading-overlay').classList.add('active');
+            setTimeout(() => {
+                window.location.href = 'report_ar.html';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

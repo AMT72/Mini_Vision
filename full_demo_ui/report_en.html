@@ -283,4 +283,29 @@
 </div>
 </div>
 </footer>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Setup links
+    document.querySelectorAll('button').forEach(btn => {
+        if(btn.innerText.includes('Assess My Car')) {
+            btn.onclick = () => window.location.href = 'assessment_en.html';
+        }
+    });
+
+    document.querySelectorAll('body *').forEach(el => {
+        if(el.children.length === 0 && el.innerText.includes('العربية')) {
+            el.style.cursor = 'pointer';
+            // It could be deep inside, so just attach to this element
+            el.onclick = () => window.location.href = 'index_ar.html';
+            // Also try to attach to parent to be safe
+            el.parentElement.style.cursor = 'pointer';
+            el.parentElement.onclick = () => window.location.href = 'index_ar.html';
+        }
+        if(el.children.length === 0 && (el.innerText.trim() === 'Back' || el.innerText.trim() === 'Dashboard')) {
+            el.style.cursor = 'pointer';
+            el.onclick = () => window.location.href = 'index_en.html';
+        }
+    });
+});
+</script>
 </body></html>

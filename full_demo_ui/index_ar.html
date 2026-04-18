@@ -316,4 +316,31 @@
   // Note: Using the CSS animation for smooth sliding as requested for "pipeline" feel.
   // If a hard jump every 5s was required, this script would handle it.
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Setup links
+    document.querySelectorAll('button').forEach(btn => {
+        if(btn.innerText.includes('قيم سيارتي')) {
+            btn.onclick = () => window.location.href = 'assessment_ar.html';
+        }
+        if(btn.innerText.includes('EN')) {
+            btn.onclick = () => window.location.href = 'index_en.html';
+        }
+    });
+
+    // Language switcher text fallback
+    document.querySelectorAll('body *').forEach(el => {
+        // Find elements with EN text and attach onclick
+        if(el.children.length === 0 && el.innerText.trim() === 'EN') {
+            el.parentElement.style.cursor = 'pointer';
+            el.parentElement.onclick = () => window.location.href = 'index_en.html';
+        }
+        // In the report page, maybe something to go back? usually a logo or word
+        if(el.children.length === 0 && (el.innerText.trim() === 'العودة' || el.innerText.trim() === 'لوحة القيادة')) {
+            el.style.cursor = 'pointer';
+            el.onclick = () => window.location.href = 'index_ar.html';
+        }
+    });
+});
+</script>
 </body></html>
