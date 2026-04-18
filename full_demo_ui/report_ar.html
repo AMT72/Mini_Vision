@@ -106,17 +106,18 @@
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
         <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-[1920px] mx-auto">
             <div class="text-xl font-bold tracking-tighter text-black font-headline" style="">
-                Car Vision
+                <a href="index_ar.html" class="hover:opacity-80 transition-opacity">CAR VISION</a>
             </div>
             <div class="hidden md:flex items-center space-x-8 space-x-reverse font-headline tracking-tight">
-                <a class="text-stone-500 hover:text-black transition-colors" href="#" style="">العملية</a>
+                <a class="text-stone-500 hover:text-black transition-colors" href="index_ar.html" style="">العودة للرئيسية</a>
                 <a class="text-stone-500 hover:text-black transition-colors" href="#" style="">التقنية</a>
                 <a class="text-stone-500 hover:text-black transition-colors" href="#" style="">الدعم</a>
             </div>
             <button
-                class="primary-gradient text-on-primary px-6 py-2 rounded-md font-medium text-sm active:scale-95 duration-200"
+                class="flex items-center gap-2 px-4 py-2 border border-stone-200 dark:border-stone-800 rounded-md text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-900 transition-colors active:scale-95 duration-200"
                 style="">
-                قيّم سيارتي
+                <span class="material-symbols-outlined text-lg" style="">language</span>
+                <span class="font-headline" style="">EN</span>
             </button>
         </div>
         <div class="bg-stone-100 h-[1px] w-full"></div>
@@ -339,7 +340,7 @@
                     btn.onclick = () => window.location.href = 'assessment_ar.html';
                 }
                 if (btn.innerText.includes('EN')) {
-                    btn.onclick = () => window.location.href = 'index_en.html';
+                    btn.onclick = () => window.location.href = 'report_en.html';
                 }
             });
 
@@ -348,7 +349,7 @@
                 // Find elements with EN text and attach onclick
                 if (el.children.length === 0 && el.innerText.trim() === 'EN') {
                     el.parentElement.style.cursor = 'pointer';
-                    el.parentElement.onclick = () => window.location.href = 'index_en.html';
+                    el.parentElement.onclick = () => window.location.href = 'report_en.html';
                 }
                 // In the report page, maybe something to go back? usually a logo or word
                 if (el.children.length === 0 && (el.innerText.trim() === 'العودة' || el.innerText.trim() === 'لوحة القيادة')) {

@@ -1,311 +1,358 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "on-primary-fixed": "#ffffff",
-                    "surface-tint": "#5e5e5e",
-                    "tertiary": "#3a3c3c",
-                    "error-container": "#ffdad6",
-                    "inverse-surface": "#2f3132",
-                    "on-secondary-fixed-variant": "#373c43",
-                    "inverse-primary": "#c6c6c6",
-                    "on-secondary-container": "#171c22",
-                    "surface-bright": "#f9f9fb",
-                    "on-primary-container": "#ffffff",
-                    "outline": "#777777",
-                    "surface-container-low": "#f3f3f5",
-                    "on-tertiary-container": "#ffffff",
-                    "error": "#ba1a1a",
-                    "on-primary": "#e2e2e2",
-                    "on-surface-variant": "#474747",
-                    "surface-dim": "#d9dadc",
-                    "on-secondary-fixed": "#171c22",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary-fixed": "#ffffff",
-                    "primary-fixed-dim": "#474747",
-                    "background": "#f9f9fb",
-                    "primary-fixed": "#5e5e5e",
-                    "secondary-container": "#d0d5dd",
-                    "secondary-fixed": "#c2c7cf",
-                    "on-tertiary-fixed-variant": "#e2e2e2",
-                    "primary-container": "#3b3b3b",
-                    "on-error-container": "#410002",
-                    "primary": "#000000",
-                    "secondary": "#5a5f66",
-                    "surface": "#f9f9fb",
-                    "on-surface": "#1a1c1d",
-                    "on-primary-fixed-variant": "#e2e2e2",
-                    "secondary-fixed-dim": "#a7abb4",
-                    "surface-container": "#eeeef0",
-                    "inverse-on-surface": "#f0f0f2",
-                    "on-secondary": "#ffffff",
-                    "surface-container-high": "#e8e8ea",
-                    "surface-container-highest": "#e2e2e4",
-                    "on-background": "#1a1c1d",
-                    "tertiary-fixed": "#5d5e5f",
-                    "on-error": "#ffffff",
-                    "tertiary-fixed-dim": "#454747",
-                    "on-tertiary": "#e2e2e2",
-                    "surface-variant": "#e2e2e4",
-                    "tertiary-container": "#747575",
-                    "outline-variant": "#c6c6c6"
+<html class="light" dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#ffffff",
+                        "surface-tint": "#5e5e5e",
+                        "tertiary": "#3a3c3c",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#2f3132",
+                        "on-secondary-fixed-variant": "#373c43",
+                        "inverse-primary": "#c6c6c6",
+                        "on-secondary-container": "#171c22",
+                        "surface-bright": "#f9f9fb",
+                        "on-primary-container": "#ffffff",
+                        "outline": "#777777",
+                        "surface-container-low": "#f3f3f5",
+                        "on-tertiary-container": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-primary": "#e2e2e2",
+                        "on-surface-variant": "#474747",
+                        "surface-dim": "#d9dadc",
+                        "on-secondary-fixed": "#171c22",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#ffffff",
+                        "primary-fixed-dim": "#474747",
+                        "background": "#f9f9fb",
+                        "primary-fixed": "#5e5e5e",
+                        "secondary-container": "#d0d5dd",
+                        "secondary-fixed": "#c2c7cf",
+                        "on-tertiary-fixed-variant": "#e2e2e2",
+                        "primary-container": "#3b3b3b",
+                        "on-error-container": "#410002",
+                        "primary": "#000000",
+                        "secondary": "#5a5f66",
+                        "surface": "#f9f9fb",
+                        "on-surface": "#1a1c1d",
+                        "on-primary-fixed-variant": "#e2e2e2",
+                        "secondary-fixed-dim": "#a7abb4",
+                        "surface-container": "#eeeef0",
+                        "inverse-on-surface": "#f0f0f2",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e8e8ea",
+                        "surface-container-highest": "#e2e2e4",
+                        "on-background": "#1a1c1d",
+                        "tertiary-fixed": "#5d5e5f",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#454747",
+                        "on-tertiary": "#e2e2e2",
+                        "surface-variant": "#e2e2e4",
+                        "tertiary-container": "#747575",
+                        "outline-variant": "#c6c6c6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Sans Arabic", "Space Grotesk"],
+                        "body": ["Noto Sans Arabic", "Inter"],
+                        "label": ["Noto Sans Arabic", "Inter"]
+                    }
+                },
             },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "fontFamily": {
-                    "headline": ["Space Grotesk"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
-          },
-        },
-      }
+        }
     </script>
-<style>
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .progress-ring__circle {
-            transition: stroke-dashoffset 0.35s;
-            transform: rotate(-90deg);
-            transform-origin: 50% 50%;
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .primary-gradient {
+            background: linear-gradient(135deg, #000000 0%, #3b3b3b 100%);
+        }
+
+        body {
+            font-family: 'Noto Sans Arabic', sans-serif;
         }
     </style>
 </head>
-<body class="bg-white text-black font-body selection:bg-black selection:text-white">
-<nav class="sticky top-0 w-full z-50 bg-white border-b border-stone-200">
-<div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-[1920px] mx-auto">
-<div class="text-xl font-bold tracking-tighter font-headline">
-            PRECISION MONOLITH
-        </div>
-<div class="hidden md:flex items-center space-x-8 font-headline tracking-tight">
-<a class="text-stone-500 hover:text-black transition-colors" href="#">Process</a>
-<a class="text-stone-500 hover:text-black transition-colors" href="#">Technology</a>
-<a class="text-stone-500 hover:text-black transition-colors" href="#">Support</a>
-</div>
-<button class="bg-black text-white px-6 py-2 rounded-sm font-medium text-sm active:scale-95 duration-200">
-            Assess My Car
-        </button>
-</div>
-</nav>
-<main class="pt-16 pb-20 px-6 md:px-12 max-w-[1920px] mx-auto">
-<header class="mb-12">
-<div class="flex flex-col md:flex-row md:items-start justify-between gap-6">
-<div class="max-w-3xl">
-<span class="font-body text-[10px] uppercase tracking-[0.2em] text-stone-500 mb-2 block">Report ID: PM-9928-XR</span>
-<h1 class="font-headline text-5xl md:text-6xl font-bold tracking-tighter leading-none mb-6">
-                    AI DAMAGE<br/>ASSESSMENT
-                </h1>
-<p class="text-stone-600 text-lg max-w-xl leading-relaxed">Comprehensive forensic analysis of structural and cosmetic integrity for VIN: 1HGBH41JXMN00124.</p>
-</div>
-</div>
-</header>
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-<section class="lg:col-span-8">
-<div class="bg-stone-50 border border-stone-200 relative overflow-hidden h-[600px] flex items-center justify-center">
-<div class="absolute top-6 left-6 z-10">
-<div class="bg-black text-white px-2 py-0.5 text-[9px] font-bold tracking-[0.1em] uppercase rounded-sm mb-1">Primary View: Isometric</div>
-<div class="text-[10px] text-stone-500 font-medium uppercase tracking-wider">Scanned 14:02 GMT</div>
-</div>
-<!-- Primary car image expanded to cover full container width -->
-<div class="relative w-full h-full">
-<img alt="3D vehicle model" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW6KXLp7HZL_1TNio52y--HRjNZUnP8jcwhay7DpB6khrJxPRMZyVcMc-A-n7_TE8iUpiSPj817FthBOTKDOMoZlEV8iy92xnj6b7yQo-yb3-Y6Kw9uR30mRaV9n4rnjcveJ8O2XU3e9s-15Fkx74RW5IFLEuTYer9fat60Z4OkpU9I5mylX7MwazYhHfIMGiEz5dmPXiEr1LQR2SDFe9nHDkvHAmWfNwxzJD6Kz2BrBGAQs7D1PPmtQNPXviNNI1ERPVfEY2X5m2O"/>
-<!-- Controls and Legend overlay -->
-<div class="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4 pointer-events-none">
-<div class="flex gap-2 pointer-events-auto">
-<button class="bg-white border border-black px-6 py-3 flex flex-col items-center gap-1 min-w-[120px]">
-<span class="material-symbols-outlined text-sm">directions_car</span>
-<span class="text-[9px] font-bold uppercase tracking-widest">Exterior</span>
-</button>
-</div>
-<!-- Severity Scale placed on canvas, styled like Exterior button -->
-<div class="bg-white border border-stone-200 px-6 py-3 flex flex-col gap-2 min-w-[160px] pointer-events-auto">
-<div class="text-[9px] font-bold uppercase tracking-widest text-stone-500 mb-1 border-b border-stone-100 pb-1">Severity Scale</div>
-<div class="grid grid-cols-1 gap-1.5">
-<div class="flex items-center gap-2">
-<div class="w-2 h-2 bg-error"></div>
-<span class="text-[9px] font-bold uppercase tracking-tight">Severe</span>
-</div>
-<div class="flex items-center gap-2">
-<div class="w-2 h-2 bg-amber-500"></div>
-<span class="text-[9px] font-bold uppercase tracking-tight">Moderate</span>
-</div>
-<div class="flex items-center gap-2">
-<div class="w-2 h-2 bg-blue-500"></div>
-<span class="text-[9px] font-bold uppercase tracking-tight">Low</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Merged Sidebar -->
-<aside class="lg:col-span-4">
-<div class="border border-stone-200 p-8 h-full flex flex-col bg-stone-50">
-<div class="mb-8">
-<h2 class="font-headline text-2xl font-bold tracking-tight mb-2 uppercase">Analysis Overview</h2>
-<div class="flex items-center gap-2 text-[10px] text-stone-500 font-bold uppercase tracking-widest">
-<span>ARES-V4.2.0</span>
-<span class="w-1 h-1 bg-stone-300 rounded-full"></span>
-<span class="text-black">Verified Analysis</span>
-</div>
-</div>
-<div class="space-y-8 flex-grow">
-<!-- Confidence Circular Gauge -->
-<div class="flex items-center gap-6 py-4 border-y border-stone-100">
-<div class="relative w-20 h-20 flex items-center justify-center">
-<svg class="w-full h-full" viewbox="0 0 100 100">
-<circle class="text-stone-100 stroke-current" cx="50" cy="50" fill="transparent" r="42" stroke-width="8"></circle>
-<circle class="text-black stroke-current progress-ring__circle" cx="50" cy="50" fill="transparent" r="42" stroke-dasharray="263.89" stroke-dashoffset="1.58" stroke-linecap="butt" stroke-width="8"></circle>
-</svg>
-<span class="absolute font-headline font-bold text-xs">99.4%</span>
-</div>
-<div>
-<div class="text-[9px] font-bold uppercase tracking-widest text-stone-500 mb-1">Model Confidence</div>
-<p class="text-xs text-stone-600 leading-tight">ISO-27001 industrial certification standards met.</p>
-</div>
-</div>
-<!-- Report Findings -->
-<div class="space-y-6">
-<div class="relative pl-6 border-l-2 border-black">
-<div class="text-[9px] font-bold uppercase tracking-widest text-stone-500 mb-1 flex items-center gap-2">
-<div class="w-1.5 h-1.5 bg-error"></div> Critical Finding
-                            </div>
-<div class="text-md font-bold leading-tight">Front Quarter Panel Deformation</div>
-<div class="text-xs text-stone-600 mt-2 italic">Geometric variance detected.</div>
-</div>
-<div class="relative pl-6 border-l-2 border-stone-200">
-<div class="text-[9px] font-bold uppercase tracking-widest text-stone-500 mb-1 flex items-center gap-2">
-<div class="w-1.5 h-1.5 bg-blue-500"></div> Minor Finding
-                            </div>
-<div class="text-md font-bold leading-tight">Roof Surface Scratch</div>
-<div class="text-xs text-stone-600 mt-2">Surface-level abrasions detected.</div>
-</div>
-<div class="relative pl-6 border-l-2 border-stone-200">
-<div class="text-[9px] font-bold uppercase tracking-widest text-stone-500 mb-1 flex items-center gap-2">
-<div class="w-1.5 h-1.5 bg-blue-500"></div> Minor Finding
-                            </div>
-<div class="text-md font-bold leading-tight">Rear Door Abrasion</div>
-<div class="text-xs text-stone-600 mt-2">Minor paint transfer detected.</div>
-</div>
-</div>
-<!-- Stats Grid -->
-<div class="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-stone-100">
-<div>
-<div class="text-[8px] font-bold uppercase tracking-tighter text-stone-400 mb-0.5">Dataset Refs</div>
-<div class="text-md font-headline font-bold">14.2M+</div>
-</div>
-<div>
-<div class="text-[8px] font-bold uppercase tracking-tighter text-stone-400 mb-0.5">Analysis Time</div>
-<div class="text-md font-headline font-bold">0.82s</div>
-</div>
-</div>
-</div>
-<div class="mt-8 pt-6 border-t border-stone-200 space-y-2">
-<button class="w-full bg-black text-white py-4 font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:bg-stone-800 transition-colors">
-<span class="material-symbols-outlined text-sm">download</span>
-                        Export PDF Report
-                    </button>
-<button class="w-full bg-transparent border border-black text-black py-4 font-bold uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:bg-stone-50 transition-colors">
-                        Send to Insurer
-                    </button>
-</div>
-</div>
-</aside>
-</div>
-<!-- Reduced vertical gap to next section -->
-<section class="mt-12">
-<div class="flex items-end justify-between mb-8 border-b border-stone-100 pb-4">
-<div>
-<h2 class="font-headline text-3xl font-bold tracking-tighter uppercase">AI Heatmap Analysis</h2>
-<p class="text-stone-500 mt-1 uppercase text-[10px] tracking-[0.2em]">Neural focus mapping of identified damage zones</p>
-</div>
-<button class="text-[10px] font-bold uppercase tracking-widest border-b border-black pb-1">All Assets (14)</button>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-<div class="aspect-square bg-stone-50 border border-stone-200 overflow-hidden group relative">
-<img alt="Rear Impact Zone" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujyD_a0CbgWVND4P59VnK6iXDN3yxJHWe7DbsoSGl0-3NxJ-RkoUaaJ6o2qA-k3HwEhzJOqXxYvpj6mmRFfnGiT_m0XtIGbBetiBccqYT5eVzahc93bk-cPwSlMCZ9EnkqoP7Q7c11mfAEUJMFzYWGoH1S8xT6Y5W2JCAmGA_U6CxPcTr3-J2dnkWMR_vCTNilAZAiM2lf5Bukp0ZpJyakv8cudI20qrvK0js6xzFYzX7HtXhQv7tMC70XONnFgJ8qyzB3v8YYksLw"/>
-<div class="absolute bottom-0 left-0 right-0 p-3 bg-white/95 border-t border-stone-200">
-<span class="text-[9px] font-bold uppercase tracking-widest">Rear Impact Zone</span>
-</div>
-</div>
-<div class="aspect-square bg-stone-50 border border-stone-200 overflow-hidden group relative">
-<img alt="Front Quarter Zone" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uif3yHGwcfrN-3B5Ubqbcj6Lk9mwC3tvhIFlyCnYk2zhyDg3KahYdZbve8kMtaJsQn5x_P4HYMOUkg2-y5qR1HmA-A2ghmt7vt7Ir3-cCegizldNV-rW88uxXA-_IotQ-vExIFq9JtGg6KftVWHVgTJZ4ebKalMLpVioZEwGK665aVXR7e_MxF9VJG-Xzxa0pL31W9Oj_kzsA7k-Jx2LST1KQ0YQ2O25rcKNjFz_0rbtvb1yUdO2-TY6wsHwdt2gqJwUdNC8tDDcQw"/>
-<div class="absolute bottom-0 left-0 right-0 p-3 bg-white/95 border-t border-stone-200">
-<span class="text-[9px] font-bold uppercase tracking-widest">Front Quarter Zone</span>
-</div>
-</div>
-<div class="aspect-square bg-stone-50 border border-stone-200 overflow-hidden group relative">
-<img alt="Structural Var." class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugpRTG5ynlubiz7QonMag4o0GOhvRSbH7c0K5ylXBsQK29Kxt4zeXUIo-sPY-LQMkqOImDtJCRkooEUlFFDfh6SLLZyRJgB2mE9usKZoWiHPzw0dcuB-u-ZRoF-xDimzykdKOHCfZL6CHa4szUBD31ekASuUacHhxgCsHBq94_QBtPhGoV9BY0gGXIvtYLG0CSdyjqOAuDGrv7RIMr2g2KmXNUxm-H5ipmEB9p3wF2PPEKKfPDlvemb_JrTHu1ktCIryRlBsILC-6A"/>
-<div class="absolute bottom-0 left-0 right-0 p-3 bg-white/95 border-t border-stone-200">
-<span class="text-[9px] font-bold uppercase tracking-widest">Structural Var.</span>
-</div>
-</div>
-<div class="aspect-square bg-stone-50 border border-stone-200 overflow-hidden group relative">
-<img alt="Surface Scuffing" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uiZ2mtEsMWa6L18liTNUkH6k9nsQdfzU0tGcNpMfGEMr6Ooy04x6SdJnczpUCQGtLnFXeurizPXb3ARCbYPVJYV3QddP6jdzggP0UwTalfLqNIcLoUQIE4bwWsmj7vBLZd_mhHJe4GFMgLtue_8YdNP7oLvQGom7fcwqwhceyzpl6gf4GTYHpVxtotpkf_tbDm227mwI3_zJzljo8TC5bIGei0SqooTIU4s1eiqqfOlJTPaBzZ2RP4sRHnMCPT3633hbXdbeVVf8Q"/>
-<div class="absolute bottom-0 left-0 right-0 p-3 bg-white/95 border-t border-stone-200">
-<span class="text-[9px] font-bold uppercase tracking-widest">Surface Scuffing</span>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="w-full py-12 bg-white border-t border-stone-200 mt-20">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12 max-w-[1920px] mx-auto">
-<div>
-<div class="font-headline font-bold text-lg mb-4">PRECISION MONOLITH</div>
-<p class="font-body text-[10px] uppercase tracking-widest text-stone-400">© 2024 PRECISION MONOLITH. ALL RIGHTS RESERVED.</p>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div class="flex flex-col space-y-2">
-<a class="font-body text-[10px] uppercase tracking-widest text-stone-400 hover:text-black transition-colors" href="#">Privacy</a>
-<a class="font-body text-[10px] uppercase tracking-widest text-stone-400 hover:text-black transition-colors" href="#">Terms</a>
-</div>
-<div class="flex flex-col space-y-2">
-<a class="font-body text-[10px] uppercase tracking-widest text-stone-400 hover:text-black transition-colors" href="#">Documentation</a>
-<a class="font-body text-[10px] uppercase tracking-widest text-stone-400 hover:text-black transition-colors" href="#">Support</a>
-</div>
-</div>
-</div>
-</footer>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Setup links
-    document.querySelectorAll('button').forEach(btn => {
-        if(btn.innerText.includes('Assess My Car')) {
-            btn.onclick = () => window.location.href = 'assessment_en.html';
-        }
-    });
 
-    document.querySelectorAll('body *').forEach(el => {
-        if(el.children.length === 0 && el.innerText.includes('العربية')) {
-            el.style.cursor = 'pointer';
-            // It could be deep inside, so just attach to this element
-            el.onclick = () => window.location.href = 'index_ar.html';
-            // Also try to attach to parent to be safe
-            el.parentElement.style.cursor = 'pointer';
-            el.parentElement.onclick = () => window.location.href = 'index_ar.html';
-        }
-        if(el.children.length === 0 && (el.innerText.trim() === 'Back' || el.innerText.trim() === 'Dashboard')) {
-            el.style.cursor = 'pointer';
-            el.onclick = () => window.location.href = 'index_en.html';
-        }
-    });
-});
-</script>
-</body></html>
+<body
+    class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-[1920px] mx-auto">
+            <div class="text-xl font-bold tracking-tighter text-black font-headline" style="">
+                <a href="index_en.html" class="hover:opacity-80 transition-opacity">CAR VISION</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8  font-headline tracking-tight">
+                <a class="text-stone-500 hover:text-black transition-colors" href="index_en.html" style="">Return</a>
+                <a class="text-stone-500 hover:text-black transition-colors" href="#" style="">Technology</a>
+                <a class="text-stone-500 hover:text-black transition-colors" href="#" style="">Support</a>
+            </div>
+            <button
+                class="flex items-center gap-2 px-4 py-2 border border-stone-200 dark:border-stone-800 rounded-md text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-900 transition-colors active:scale-95 duration-200"
+                style="">
+                <span class="material-symbols-outlined text-lg" style="">language</span>
+                <span class="font-headline" style="">AR</span>
+            </button>
+        </div>
+        <div class="bg-stone-100 h-[1px] w-full"></div>
+    </nav>
+    <main class="pt-24 pb-20 px-6 md:px-12 max-w-[1920px] mx-auto">
+        <header class="mb-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div class="max-w-3xl">
+                    <span class="font-body text-xs uppercase tracking-[0.2em] text-outline mb-4 block" dir="ltr"
+                        style="">Report ID: PM-9928-XR</span>
+                    <h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6" style="">
+                        AI Damage<br />Analysis
+                    </h1>
+                    <p class="text-secondary text-lg max-w-xl" style="">Comprehensive digital analysis of structural and cosmetic integrity for VIN: 1HGBH41JXMN00124.</p>
+                </div>
+                <div class="flex flex-col items-start md:items-end">
+                    <!-- <div class="text-xs font-bold tracking-widest uppercase text-outline mb-1" style="">نسبة الدقة الإجمالية</div> -->
+                    <!-- <div class="font-headline text-6xl font-bold tracking-tighter" style="">98.4<span class="text-2xl font-light" style="">%</span></div> -->
+                </div>
+            </div>
+        </header>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Main Analysis Image Section -->
+            <section class="lg:col-span-12">
+                <div
+                    class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_12px_40px_rgba(26,28,29,0.06)] relative overflow-hidden group">
+                    <div class="absolute top-6 right-6 z-10 text-right">
+                        <div class="bg-primary text-on-primary px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm mb-2 inline-block"
+                            style="">INTEGRATED DIGITAL TWIN</div>
+                        <div class="text-xs text-secondary font-medium uppercase tracking-wider" style="">SCANNED AT 14:02 GMT</div>
+                    </div>
+                    <div class="relative w-full aspect-[21/9] flex items-center justify-center">
+                        <img alt="3D wireframe digital twin vehicle model" class="w-full h-full object-contain"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW6KXLp7HZL_1TNio52y--HRjNZUnP8jcwhay7DpB6khrJxPRMZyVcMc-A-n7_TE8iUpiSPj817FthBOTKDOMoZlEV8iy92xnj6b7yQo-yb3-Y6Kw9uR30mRaV9n4rnjcveJ8O2XU3e9s-15Fkx74RW5IFLEuTYer9fat60Z4OkpU9I5mylX7MwazYhHfIMGiEz5dmPXiEr1LQR2SDFe9nHDkvHAmWfNwxzJD6Kz2BrBGAQs7D1PPmtQNPXviNNI1ERPVfEY2X5m2O"
+                            style="" />
+                    </div>
+                </div>
+                <div
+                    class="flex flex-wrap items-center justify-center gap-6 mt-4 py-2 border-t border-outline-variant/10">
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-sm bg-error shadow-sm"></div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-secondary">HIGH DAMAGE</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-sm bg-amber-500 shadow-sm"></div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-secondary">MODERATE
+                            DAMAGE</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-3 h-3 rounded-sm bg-blue-500 shadow-sm"></div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-secondary">MINOR DAMAGE</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Merged Data Block: Summary & Validation -->
+            <section class="lg:col-span-12">
+                <div class="bg-surface-container-low p-8 rounded-xl grid grid-cols-1 lg:grid-cols-3 gap-12">
+                    <!-- Findings Column -->
+                    <div class="lg:col-span-1 space-y-8">
+                        <h2 class="font-headline text-2xl font-bold tracking-tight" style="">FINDINGS SUMMARY</h2>
+                        <div class="space-y-6">
+                            <div class="relative pr-6 border-r-2 border-error">
+                                <div class="text-[10px] font-bold uppercase tracking-widest text-error mb-1" style="">
+                                    CRITICAL</div>
+                                <div class="text-lg font-bold leading-tight" style="">Front Quarter Panel Deformation
+                                </div>
+                                <div class="text-sm text-secondary mt-2" style="">Geometric variance detected in the front left quarter.</div>
+                            </div>
+                            <div class="relative pr-6 border-r-2 border-amber-500">
+                                <div class="text-[10px] font-bold uppercase tracking-widest text-amber-600 mb-1"
+                                    style="">MODERATE</div>
+                                <div class="text-lg font-bold leading-tight" style="">Rear Door Abrasion</div>
+                                <div class="text-sm text-secondary mt-2" style="">Slight paint transfer and scuffs on the rear passenger door assembly.</div>
+                            </div>
+                            <div class="relative pr-6 border-r-2 border-blue-500">
+                                <div class="text-[10px] font-bold uppercase tracking-widest text-blue-600 mb-1"
+                                    style="">MINOR</div>
+                                <div class="text-lg font-bold leading-tight" style="">Roof Surface Scratches</div>
+                                <div class="text-sm text-secondary mt-2" style="">Surface level abrasion detected on the
+                                    roof panel.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Technical Validation Column -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <div class="flex items-center justify-between">
+                            <h2 class="font-headline text-2xl font-bold tracking-tight" style="">SMART VALIDATION</h2>
+                            <div class="flex items-center gap-2 bg-green-50 px-3 py-1 rounded border border-green-100">
+                                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <span class="text-[10px] font-bold uppercase text-green-700" style="">VERIFIED DATA</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-6">
+                                <div class="space-y-3">
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-[10px] font-bold uppercase tracking-widest text-secondary"
+                                            style="">MODEL ACCURACY</span>
+                                        <span class="font-headline font-bold text-lg" style="">99.4%</span>
+                                    </div>
+                                    <div class="h-1.5 bg-surface-container-highest w-full rounded-full overflow-hidden">
+                                        <div class="h-full bg-primary w-[99.4%]"></div>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-[10px] font-bold uppercase tracking-widest text-secondary"
+                                            style="">PROCESSING TIME</span>
+                                        <span class="font-headline font-bold text-lg" style="">0.82s</span>
+                                    </div>
+                                    <div class="h-1.5 bg-surface-container-highest w-full rounded-full overflow-hidden">
+                                        <div class="h-full bg-primary w-[82%]"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="grid grid-cols-2 gap-4">
+                                <div class="p-4 bg-white/50 rounded">
+                                    <div class="text-[10px] font-bold uppercase tracking-tighter text-secondary mb-1" style="">نقاط المقارنة</div>
+<div class="text-xl font-headline font-bold" style="">14.2M+</div>
+                                </div>
+                                <div class="p-4 bg-white/50 rounded">
+                                    <!-- <div class="text-[10px] font-bold uppercase tracking-tighter text-secondary mb-1" style="">دقة الفحص</div>
+<div class="text-xl font-headline font-bold" style="">0.05مم</div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 pt-6 border-t border-outline-variant/20">
+                    <button
+                        class="flex-1 primary-gradient text-on-primary py-3 rounded-md font-bold uppercase tracking-widest text-xs flex items-center justify-center gap-2"
+                        style="">
+                        <span class="material-symbols-outlined text-sm" style="">download</span> تصدير التقرير
+                        (PDF)
+                    </button>
+                    <button
+                        class="flex-1 border border-primary text-primary py-3 rounded-md font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-on-primary transition-all"
+                        style="">EMAIL A COPY</button>
+                </div>
+        </div>
+        </div>
+        </section>
+        </div>
+        <!-- Raw Scan Data Section with Heatmaps -->
+        <section class="mt-20">
+            <div class="flex items-end justify-between mb-8">
+                <div>
+                    <h2 class="font-headline text-3xl font-bold tracking-tighter" style="">ANALYTICAL SCAN DATA</h2>
+                    <p class="text-secondary mt-1 uppercase text-xs tracking-[0.2em]" style="">HEATMAPS SHOWING DIGITAL TWIN FOCUS AREAS</p>
+                </div>
+                <button class="text-xs font-bold uppercase tracking-widest underline underline-offset-8" style="">ALL IMAGES (14)</button>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="aspect-square bg-surface-container-high rounded-lg overflow-hidden group relative">
+                    <img alt="Heatmap XAI 1"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/ADBb0ujecvf1NGrBppxA5EjJrJTZHt2s2cCLtRhrIsau2qXMZfnUSwquK2AkbHzR5DnOG0GtU2ikrn4tKA9ordekBoWkdxXHaSoR4PVEPqZ_lhiNiUfVSc19BFfsZJD8C91mqDvZ7Znj6Sp9iI8iUM8AXALpYbCtdZ8y_W1h5izgP-jlkEXMWy6C9Zg8VL9ogS5NZIc22A8zP6MIX-xaEauZEs3-gpHflaYrmG0tQ1VC1S0HiZxwOTR4pMM4TMRyC5N1-t2CXfjD1TxAFO8"
+                        style="" />
+                    <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded"
+                        style="">XAI 01</div>
+                </div>
+                <div class="aspect-square bg-surface-container-high rounded-lg overflow-hidden group relative">
+                    <img alt="Heatmap XAI 2"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/ADBb0uhUdD2hUFh5-WVZkYrWEFj9BpVPFnoEOQvBOqv8n684PlMiqZvGydDz307hPeRc2p88Sd3KSpKBeGXL7HjBNy16tPsontnpGf3LeOtE1WiC7pkCxfLYMIkGbkZtFehReDh7Qji9fORwKvIJQykeM9invywruGuvmVYyZDgtft4MRdrKiXWiS6lWrEmewQyZrXmbrtm4QFg_52dWM-pwWrDzJTNHWR1wgiEtDSLrdKr6tlupJHPWevPdiKVz2OpMaFPkQHGLJgGgCQ"
+                        style="" />
+                    <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded"
+                        style="">XAI 02</div>
+                </div>
+                <div class="aspect-square bg-surface-container-high rounded-lg overflow-hidden group relative">
+                    <img alt="Heatmap XAI 3"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/ADBb0uhEAFur1zHAqBclnJSph7P18p0QT_lJpq5-8qMfemmcE4umawMNVMwHq0P68yCPqJzwFD6XCT4jCKgBmp5edZPzDdbm79-O9OOmL_BfPbeZaUdyTFlxKXouBWXayEcTV5dV4zJkt3y3-996dIxKrOxEUHND4uESFXptPRW2pVgfHrJwFXPKkipRiupaQJSno4wB6lzJ2hsyoh2Q6cnlFnhmSq9UoDUoCzg9hGGFUoEYEdkmTOfbWUj1S4uozkF_1ismgUEbuLwxKw"
+                        style="" />
+                    <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded"
+                        style="">XAI 03</div>
+                </div>
+                <div class="aspect-square bg-surface-container-high rounded-lg overflow-hidden group relative">
+                    <img alt="Heatmap XAI 4"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        src="https://lh3.googleusercontent.com/aida/ADBb0ujKlzxbmBb5mOSOUXOvC4ry7G2MzDOHtuWdG--hs2vhLu3yTm8HDc55SXxBI700lA-55_wQaNklnrVIFYETqFz-bD6-TZLn27t_D9kIpIVSadUUCeFcffdSC0t_haNDv4GFTf7LYkqDuzbOdzFqYZ9Zi8-uZ2mE8Ohq6q27lvYvcHfj6mg3zhp88-HClmmocsCX9QZapBPaSn4V2QvbJjqcufUYH3_vTx5X7TxG1EPt79NcouO-VyoB1uwqfH1MqTDj54bvmaCxfQ"
+                        style="" />
+                    <div class="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded"
+                        style="">XAI 04</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="w-full py-12 bg-stone-50 border-t border-stone-200">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12 max-w-[1440px] mx-auto">
+            <div>
+                <div class="font-headline font-bold text-lg mb-4" style="">Car Vision</div>
+                <p class="font-body text-xs uppercase tracking-widest text-stone-400" style="">© 2026 Car Vision. STRUCTURAL DATA INTEGRITY.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col space-y-2">
+                    <a class="font-body text-xs uppercase tracking-widest text-stone-400 hover:text-black transition-opacity"
+                        href="#" style="">Privacy Policy</a>
+                    <a class="font-body text-xs uppercase tracking-widest text-stone-400 hover:text-black transition-opacity"
+                        href="#" style="">Terms of Service</a>
+                </div>
+                <div class="flex flex-col space-y-2">
+                    <a class="font-body text-xs uppercase tracking-widest text-stone-400 hover:text-black transition-opacity font-bold"
+                        href="#" style="">Technical Documentation</a>
+                    <a class="font-body text-xs uppercase tracking-widest text-stone-400 hover:text-black transition-opacity"
+                        href="#" style="">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Setup links
+            document.querySelectorAll('button').forEach(btn => {
+                if (btn.innerText.includes('قيم سيارتي')) {
+                    btn.onclick = () => window.location.href = 'assessment_ar.html';
+                }
+                if (btn.innerText.includes('AR')) {
+                    btn.onclick = () => window.location.href = 'report_ar.html';
+                }
+            });
+
+            // Language switcher text fallback
+            document.querySelectorAll('body *').forEach(el => {
+                if (el.children.length === 0 && el.innerText.trim() === 'AR') {
+                    el.parentElement.style.cursor = 'pointer';
+                    el.parentElement.onclick = () => window.location.href = 'report_ar.html';
+                }
+                // In the report page, maybe something to go back? usually a logo or word
+                if (el.children.length === 0 && (el.innerText.trim() === 'Return' || el.innerText.trim() === 'Dashboard')) {
+                    el.style.cursor = 'pointer';
+                    el.onclick = () => window.location.href = 'index_en.html';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
