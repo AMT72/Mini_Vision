@@ -1,0 +1,26 @@
+# Core AI Frameworks
+torch
+torchvision
+ultralytics
+
+# Image Processing
+opencv-python
+Pillow
+numpy
+matplotlib
+natsort     # Essential for natural ordering (1, 2, 10... instead of 1, 10, 2)
+
+# Explainable AI (XAI)
+captum                  # PyTorch's official XAI library (supports Grad-CAM)
+ttach                   # For Test-Time Augmentation (optional but helpful for XAI)
+
+# UI & Web
+streamlit               # For the functional app interface
+
+# Utilities
+pandas
+scikit-learn
+tqdm
+ipykernel
+tqdm
+gdown #Downloads files from Google Drive

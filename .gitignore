@@ -1,0 +1,4 @@
+data/
+venv/
+.evn/__pycache__/
+src/utils/__pycache__/
