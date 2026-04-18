@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini_Vision - رفع الصور</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="en/assessment.html" class="lang-switch label-md">English</a>
+
+    <!-- Navigation Breadcrumbs -->
+    <div style="padding: 2rem 2rem 0; width: 100%; max-width: 1200px; margin: 0 auto; display: flex; gap: 2rem;">
+        <a href="index.html" class="label-md" style="color:#777777;">&larr; العودة للرئيسية</a>
+    </div>
+
+    <div class="container hero" style="min-height: 70vh;">
+        <h1 class="display-lg" style="font-size: 3rem;">رفع الصور</h1>
+        <p class="body-lg mb-4">الخطوة الأولى في عملية التقييم الذكي. اختر مصدر الصورة.</p>
+        
+        <div class="upload-area" id="upload-trigger">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 1rem;">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+            </svg>
+            <h3 style="margin-bottom: 0.5rem;">قم بسحب وإسقاط الصور هنا</h3>
+            <p style="color: #747575;">أو اضغط للاختيار من المعرض للبدء</p>
+        </div>
+
+        <div class="card ghost-border">
+            <h4 class="label-md mb-2">تعليمات التصوير</h4>
+            <div class="grid-3">
+                <div>
+                    <strong>الإضاءة المثالية</strong>
+                    <p style="font-size: 0.9rem; color: #5a5f66;">تأكد من الإضاءة الجيدة/الطبيعية للحصول على أفضل النتائج.</p>
+                </div>
+                <div>
+                    <strong>زاوية التحليل</strong>
+                    <p style="font-size: 0.9rem; color: #5a5f66;">التقط الصورة بزاوية 45 درجة لتحليل هيكلي دقيق.</p>
+                </div>
+                <div>
+                    <strong>تجنب الانعكاس</strong>
+                    <p style="font-size: 0.9rem; color: #5a5f66;">تجنب الوهج المباشر أو الظلال القوية التي قد تخفي التفاصيل.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="display-lg" style="font-size: 2rem;">جاري المعالجة والتحليل...</div>
+        <p class="body-lg">يتم الآن فحص الأضرار بواسطة الذكاء الاصطناعي</p>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
