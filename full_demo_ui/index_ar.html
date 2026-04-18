@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html style=""><head><meta charset="utf-8"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Noto+Sans+Arabic:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-primary-fixed": "#ffffff",
+                "surface-tint": "#5e5e5e",
+                "tertiary": "#3a3c3c",
+                "error-container": "#ffdad6",
+                "inverse-surface": "#2f3132",
+                "on-secondary-fixed-variant": "#373c43",
+                "inverse-primary": "#c6c6c6",
+                "on-secondary-container": "#171c22",
+                "surface-bright": "#f9f9fb",
+                "on-primary-container": "#ffffff",
+                "outline": "#777777",
+                "surface-container-low": "#f3f3f5",
+                "on-tertiary-container": "#ffffff",
+                "error": "#ba1a1a",
+                "on-primary": "#e2e2e2",
+                "on-surface-variant": "#474747",
+                "surface-dim": "#d9dadc",
+                "on-secondary-fixed": "#171c22",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed": "#ffffff",
+                "primary-fixed-dim": "#474747",
+                "background": "#f9f9fb",
+                "primary-fixed": "#5e5e5e",
+                "secondary-container": "#d0d5dd",
+                "secondary-fixed": "#c2c7cf",
+                "on-tertiary-fixed-variant": "#e2e2e2",
+                "primary-container": "#3b3b3b",
+                "on-error-container": "#410002",
+                "primary": "#000000",
+                "secondary": "#5a5f66",
+                "surface": "#f9f9fb",
+                "on-surface": "#1a1c1d",
+                "on-primary-fixed-variant": "#e2e2e2",
+                "secondary-fixed-dim": "#a7abb4",
+                "surface-container": "#eeeef0",
+                "inverse-on-surface": "#f0f0f2",
+                "on-secondary": "#ffffff",
+                "surface-container-high": "#e8e8ea",
+                "surface-container-highest": "#e2e2e4",
+                "on-background": "#1a1c1d",
+                "tertiary-fixed": "#5d5e5f",
+                "on-error": "#ffffff",
+                "tertiary-fixed-dim": "#454747",
+                "on-tertiary": "#e2e2e2",
+                "surface-variant": "#e2e2e4",
+                "tertiary-container": "#747575",
+                "outline-variant": "#c6c6c6"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "fontFamily": {
+                "headline": ["Space Grotesk", "Noto Sans Arabic"],
+                "body": ["Inter", "Noto Sans Arabic"],
+                "label": ["Inter", "Noto Sans Arabic"]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  body {
+    direction: rtl;
+    background-color: #f9f9fb;
+    font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .primary-gradient {
+    background: linear-gradient(135deg, #000000 0%, #3b3b3b 100%);
+  }
+  .pipeline-mask {
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+  @keyframes slide-infinite {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(50%); }
+  }
+  .animate-slide {
+    animation: slide-infinite 30s linear infinite;
+  }
+  .carousel-item {
+    transition: opacity 1s ease-in-out;
+  }
+</style>
+</head><body class="text-on-surface">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-stone-950/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-[1920px] mx-auto rtl:flex-row-reverse">
+<div class="text-xl font-bold tracking-tighter text-black dark:text-white font-headline" style="">
+        PRECISION MONOLITH
+      </div>
+<div class="hidden md:flex items-center gap-8 font-headline tracking-tight text-stone-500">
+<a class="text-black dark:text-white border-b-2 border-black dark:border-white pb-1 transition-colors" href="#" style="">الصفحة الرئيسية</a>
+<a class="hover:text-black dark:hover:text-white transition-colors" href="#" style="">المميزات</a>
+<a class="hover:text-black dark:hover:text-white transition-colors" href="#" style="">تواصل معنا</a>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 border border-stone-200 dark:border-stone-800 rounded-md text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-900 transition-colors active:scale-95 duration-200" style="">
+<span class="material-symbols-outlined text-lg" style="">language</span>
+<span class="font-headline" style="">EN</span>
+</button>
+</div>
+<div class="bg-stone-100 dark:bg-stone-900 h-[1px] w-full"></div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section: Modernized Arabic Layout -->
+<section class="relative min-h-[921px] flex flex-col justify-center items-center px-6 md:px-12 overflow-hidden bg-surface text-center">
+<div class="max-w-[1440px] mx-auto w-full z-10 py-12">
+<span class="inline-block px-3 py-1 bg-surface-container-high text-primary font-mono text-xs tracking-widest uppercase mb-6" style="">Automated Intelligence v4.0</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-primary mb-8 leading-[1.1]" style="">تقييم أضرار المركبة<br/><span class="text-outline-variant" style="">في ثواني.</span></h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed font-light" style="">
+            نحول تقييم أضرار المركبات إلى علم بيانات معماري. يحدد ذكاؤنا الاصطناعي الأضرار بدقة جنائية في أقل من 10 ثوانٍ.
+          </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+<button class="primary-gradient text-on-primary px-16 py-6 rounded-md font-bold text-xl hover:shadow-xl transition-all active:scale-[0.98] border-2 border-primary min-w-[280px]" style="">
+              قيم سيارتي الآن
+</button>
+<button class="bg-surface-container-highest text-primary px-10 py-6 rounded-md font-bold text-lg hover:bg-surface-container-high transition-colors active:scale-[0.98]" style="">
+              عرض المنهجية
+            </button>
+</div>
+</div>
+<!-- Animated Pipeline Section using cropped regions of IMAGE_7 -->
+<div class="w-full relative mt-16 max-w-[1600px] mx-auto overflow-hidden pipeline-mask h-[400px]">
+<div class="flex gap-4 absolute left-0 top-0 animate-slide h-full" id="pipeline">
+<!-- Images from IMAGE_7 (Using segments via object-position/fit simulation or just multiple refs) -->
+<!-- For simulation purposes, we use the main image placeholder repeating with different crops -->
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
+<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 0% 0%;"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
+<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 33% 0%;"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
+<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 66% 0%;"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
+<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 100% 0%;"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
+<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 0% 100%;"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
+<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 50% 100%;"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<!-- Duplicate for seamless loop -->
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
+<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 0% 0%;"/>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
+<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 33% 0%;"/>
+</div>
+</div>
+</div><div class="flex justify-center w-full mt-8 mb-4">
+<div class="bg-black/80 backdrop-blur-md text-white px-6 py-2 rounded-sm text-xs font-headline tracking-[0.2em] uppercase">
+    جاري المعالجة: خط أنابيب البيانات
+  </div>
+</div>
+</section>
+<!-- AI Benefits: The Forensic Standard Section (Restyled from EN) -->
+<section class="py-32 px-6 md:px-12 max-w-[1920px] mx-auto bg-surface-container-low" id="technology">
+<div class="mb-20 text-right">
+<h2 class="text-xs font-headline uppercase tracking-[0.5em] text-secondary mb-4" style="">الكفاءات الأساسية</h2>
+<p class="text-4xl md:text-5xl font-headline font-bold text-primary" style="">تكنلوجيا الغد، اليوم.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Accuracy -->
+<div class="bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between h-[450px] shadow-sm hover:shadow-md transition-shadow group">
+<div class="space-y-4 text-right">
+<span class="material-symbols-outlined text-4xl text-primary" style="">biotech</span>
+<h3 class="text-2xl font-headline font-bold" style="">دقة فائقة</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed" style="">
+            تم تدريب شبكاتنا العصبية على 15 مليون نموذج عالي الدقة للأضرار، مما يحقق معدل اكتشاف يبلغ 99.8% للكسور الدقيقة.
+          </p>
+</div>
+<div class="pt-6 border-t border-surface-container flex flex-row-reverse justify-between items-end">
+<span class="text-4xl font-headline font-bold tracking-tighter" style="">99.8%</span>
+<span class="text-[10px] uppercase tracking-widest text-stone-400 group-hover:text-primary transition-colors" style="">مقياس الدقة</span>
+</div>
+</div>
+<!-- Speed -->
+<div class="bg-primary p-8 rounded-xl flex flex-col justify-between h-[450px] text-on-primary-fixed shadow-xl">
+<div class="space-y-4 text-right">
+<span class="material-symbols-outlined text-4xl text-on-primary-fixed" style="">speed</span>
+<h3 class="text-2xl font-headline font-bold" style="">سرعة لا تضاهى</h3>
+<p class="text-on-primary-fixed-variant text-sm leading-relaxed" style="">
+            بنية تحتية لإعداد التقارير الفورية. تتم معالجة البيانات والتحقق منها في الوقت الحقيقي.<br/><br/><br/><br/><br/>نضمن لك:</p>
+</div>
+<div class="text-4xl font-headline font-bold tracking-tighter text-right" style="">&gt;  10 ثوانٍ
+          </div>
+</div>
+<!-- Reliability -->
+<div class="bg-surface-container-highest p-8 rounded-xl flex flex-col justify-between h-[450px] shadow-sm">
+<div class="space-y-4 text-right">
+<span class="material-symbols-outlined text-4xl text-primary" style="">verified_user</span>
+<h3 class="text-2xl font-headline font-bold" style="">الموثوقية</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed" style="">
+            يضمن التشفير الشامل والتحقق من صحة البيانات سلامة كل تقرير أضرار.
+          </p>
+</div>
+<ul class="space-y-3 pt-4 border-t border-surface-container text-right">
+<li class="flex flex-row-reverse items-center gap-3 text-xs font-medium" style="">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+            سجل بيانات غير قابل للتغيير
+          </li>
+<li class="flex flex-row-reverse items-center gap-3 text-xs font-medium" style="">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+            ضمان وقت التشغيل بنسبة 99.9%
+          </li>
+</ul>
+</div>
+<!-- Data Integrity Image Block -->
+<div class="relative overflow-hidden rounded-xl shadow-sm group h-[450px]">
+<img alt="Futuristic technology" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnq4rLcMorQRRYdpLEiHVUV0aTFgWKMqChlHjOAu0vZ7T_oAqBNoZv_3q6vPdCma7riEaLTx3jGPhDU3O1RuXqhMxjizoKg6YtbjABm-WFfTaozOrRUFq2XAnzjpB2lUHKU6k22khggjXWWSUrj8ibKhPW1WknazxHUy6CEwGvsg3lnMoAMvrz03ibe4vtVO-_fvkeg0laXnCZB89asJlXx0fNTkAw3hVTS5Tk59FnOpywgpq8K5BeydwDMCnItUr1EDbSfkGtI_rL" style=""/>
+<div class="absolute inset-0 bg-black/60 flex items-center p-8 text-right">
+<h3 class="text-2xl font-headline font-bold text-white" style="">مــــعـــــماريــــــة قـــــــــابــــــلـــــة<br/>للـــــــــتوسّـــــــع</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Info: Connect with the Monolith Team -->
+<section class="py-32 px-6 md:px-12 max-w-[1440px] mx-auto" id="support">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+<div class="space-y-8 text-right">
+<h2 class="text-5xl font-headline font-bold tracking-tighter" style="">تواصل معنا.</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed font-light" style="">
+          سواء كنت شريكاً مؤسسياً يسعى لتكامل واجهة برمجة التطبيقات (API) أو مستخدماً فردياً لديه استفسارات فنية، فإن دعمنا الهندسي متاح على مدار الساعة طوال أيام الأسبوع.
+        </p>
+<div class="space-y-6 pt-4">
+<div class="flex flex-row-reverse items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="">terminal</span>
+<div>
+<p class="font-bold" style="">الوثائق الفنية</p>
+<p class="text-sm text-stone-400" style="">docs.precisionmonolith.io</p>
+</div>
+</div>
+<div class="flex flex-row-reverse items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" style="">alternate_email</span>
+<div>
+<p class="font-bold" style="">مبيعات المؤسسات</p>
+<p class="text-sm text-stone-400" style="">partners@monolith.tech</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 md:p-12 rounded-xl text-right">
+<form class="space-y-6">
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-secondary mb-2" style="">الاسم الكامل</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm p-4 focus:ring-0 focus:border-primary border-b-2 border-transparent transition-all text-right" placeholder="أدخل اسمك هنا" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-secondary mb-2" style="">البريد الإلكتروني للعمل</label>
+<input class="w-full bg-surface-container-high border-none rounded-sm p-4 focus:ring-0 focus:border-primary border-b-2 border-transparent transition-all text-right" placeholder="email@example.com" type="email"/>
+</div>
+<div>
+<label class="block text-xs font-bold uppercase tracking-widest text-secondary mb-2" style="">نوع الاستفسار</label>
+<select class="w-full bg-surface-container-high border-none rounded-sm p-4 focus:ring-0 focus:border-primary border-b-2 border-transparent transition-all text-right appearance-none">
+<option>دعم فني</option>
+<option>الوصول إلى API</option>
+<option>استفسار عن شراكة</option>
+</select>
+</div>
+<button class="w-full primary-gradient text-on-primary py-5 rounded-md font-bold text-lg active:scale-[0.99] transition-transform" style="" type="submit">إرسال الطلب</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Navigation Shell -->
+<footer class="w-full py-12 bg-stone-50 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-12 max-w-[1440px] mx-auto rtl:text-right">
+<div class="flex flex-col gap-4">
+<span class="font-headline font-bold text-black dark:text-white text-xl tracking-tighter" style="">PRECISION MONOLITH</span>
+<p class="text-xs uppercase tracking-widest text-stone-400 dark:text-stone-500" style="">
+          © 2024 PRECISION MONOLITH. ARCHITECTURAL DATA INTEGRITY.
+        </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<a class="text-xs uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-black dark:hover:text-white underline underline-offset-4 transition-opacity duration-300" href="#" style="">Privacy Policy</a>
+<a class="text-xs uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-black dark:hover:text-white underline underline-offset-4 transition-opacity duration-300" href="#" style="">Terms of Service</a>
+<a class="text-xs uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-black dark:hover:text-white underline underline-offset-4 transition-opacity duration-300" href="#" style="">Technical Documentation</a>
+<a class="text-xs uppercase tracking-widest text-stone-400 dark:text-stone-500 hover:text-black dark:hover:text-white underline underline-offset-4 transition-opacity duration-300" href="#" style="">Contact Support</a>
+</div>
+</div>
+</footer>
+<script>
+  // Simple script to simulate cycling images if the CSS animation isn't enough, 
+  // but CSS slide is more "minimalist tech". 
+  // For a pure 5-second cycle request:
+  const pipeline = document.getElementById('pipeline');
+  let cycleInterval;
+  
+  // Note: Using the CSS animation for smooth sliding as requested for "pipeline" feel.
+  // If a hard jump every 5s was required, this script would handle it.
+</script>
+</body></html>
