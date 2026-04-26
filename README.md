@@ -20,9 +20,8 @@ The model identifies **what** the damage is (scratch, dent, crack, …) and **wh
 
 | Layer | Technology |
 |---|---|
-| **Model** | [YOLOv8 / Ultralytics](https://docs.ultralytics.com/) — Instance Segmentation |
+| **Model** | [YOLOv26 / Ultralytics](https://docs.ultralytics.com/) — Instance Segmentation |
 | **Framework** | PyTorch + TorchVision |
-| **XAI** | [Captum](https://captum.ai/) (Grad-CAM) for explainability |
 | **UI** | [Streamlit](https://streamlit.io/) — interactive web interface |
 | **Image Processing** | OpenCV, Pillow, NumPy, Matplotlib |
 | **Language** | Python 3.11.9 |
