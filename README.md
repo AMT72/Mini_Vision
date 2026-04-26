@@ -173,10 +173,9 @@ Download or extract the datasets into the `data/` folder following the structure
 ```
 
 1. **Data Preprocessing** — Merge and convert raw annotations into a unified YOLO-format dataset.
-2. **Training** — Fine-tune a YOLOv8 segmentation model on the unified dataset.
+2. **Training** — Fine-tune a YOLOv26 segmentation model on the unified dataset.
 3. **Inference** — Run the trained model on user-uploaded images.
-4. **Explainability** — Use Grad-CAM to highlight which regions influence the model's decisions.
-5. **UI** — Streamlit app provides an interactive upload-and-predict experience.
+4. **UI** — Streamlit app provides an interactive upload-and-predict experience.
 
 ---
 
