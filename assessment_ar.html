@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini_Vision - رفع الصور</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <a href="assessment_en.html" class="lang-switch">
+        <span class="material-symbols-outlined" style="font-size: 1.125rem;">language</span>
+        <span style="font-family: 'Space Grotesk', sans-serif;">EN</span>
+    </a>
+
+    <!-- Navigation Breadcrumbs -->
+    <div style="padding: 2rem 2rem 0; width: 100%; max-width: 1200px; margin: 0 auto; display: flex; gap: 2rem;">
+        <a href="index_ar.html" class="label-md" style="color:#777777;">&larr; العودة للرئيسية</a>
+    </div>
+
+    <div class="container hero" style="min-height: 70vh;">
+        <h1 class="display-lg" style="font-size: 3rem;">رفع الصور</h1>
+        <p class="body-lg mb-4">الخطوة الأولى في عملية التقييم الذكي. اختر مصدر الصورة.</p>
+        
+        <div class="upload-area" id="upload-trigger">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 1rem;">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+            </svg>
+            <h3 style="margin-bottom: 0.5rem;">قم بسحب وإسقاط الصور هنا</h3>
+            <p style="color: #747575;">أو اضغط للاختيار من المعرض للبدء</p>
+        </div>
+
+        <div class="card ghost-border" style="display:flex; gap:2rem; align-items:flex-start; flex-wrap:wrap;">
+            <div style="flex:1; min-width:300px;">
+                <h4 class="label-md mb-2">تعليمات التصوير</h4>
+                <div class="grid-3" style="grid-template-columns: 1fr;">
+                    <div style="margin-bottom:1rem;">
+                        <strong>الإضاءة المثالية</strong>
+                        <p style="font-size: 0.9rem; color: #5a5f66;">تأكد من الإضاءة الجيدة/الطبيعية للحصول على أفضل النتائج.</p>
+                    </div>
+                    <div style="margin-bottom:1rem;">
+                        <strong>زاوية التحليل</strong>
+                        <p style="font-size: 0.9rem; color: #5a5f66;">التقط الصورة بزاوية 45 درجة لتحليل هيكلي دقيق.</p>
+                    </div>
+                    <div>
+                        <strong>تجنب الانعكاس</strong>
+                        <p style="font-size: 0.9rem; color: #5a5f66;">تجنب الوهج المباشر أو الظلال القوية التي قد تخفي التفاصيل.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="flex:1; min-width:300px;">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1c8WGZT2LiSyKTE3GhJnYCLAS6prZSFvPSvRAdawwBgRCv4H69QSon5OaVmf4MyiB0lJEG6NbwcilnGtg2U-nKKy4af8Hj7N2agH7WgybYc9-GSRyhxhRlSgeQguJMiZxAJo9J2NboWyrIADyVIiWdpoOfIznEHATU1b-XHow6zmd1lJpub9MDM4JILsUJ9KMrHETcx8xeLrSUoicKbetQyetUi9xg-71EXZytPv_3T2f0Y8jeEvmLSofakVaLvlXWXRuA_Syzq_q" alt="Example Camera Angle" style="width:100%; border-radius:var(--radius-sm); object-fit:cover;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="display-lg" style="font-size: 2rem;">جاري المعالجة والتحليل...</div>
+        <p class="body-lg">يتم الآن فحص الأضرار بواسطة الذكاء الاصطناعي</p>
+    </div>
+
+    <script>
+        document.getElementById('upload-trigger').addEventListener('click', () => {
+            document.getElementById('loading-overlay').classList.add('active');
+            setTimeout(() => {
+                window.location.href = 'report_ar.html';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
