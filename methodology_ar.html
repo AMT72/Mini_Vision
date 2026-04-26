@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>المنهجية | CAR VISION</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+  body {
+    direction: rtl;
+    background-color: #f9f9fb;
+    font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+    color: #1a1c1d;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .primary-gradient {
+    background: linear-gradient(135deg, #000000 0%, #3b3b3b 100%);
+  }
+  .step-card {
+    background: #ffffff;
+    border: 1px solid #e2e2e4;
+    border-radius: 0.5rem;
+    padding: 1.5rem 1.25rem;
+    min-width: 200px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(26,28,29,0.04);
+  }
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    border-radius: 9999px;
+    background: #000;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+  .arrow {
+    color: #777;
+    font-size: 2rem;
+    line-height: 1;
+    user-select: none;
+  }
+  /* In RTL, the visual order is right-to-left. We want the flow to read R→L:
+     1 → 2 → 3 → 4 → 5 visually right to left. Flex with default row in RTL gives that. */
+</style>
+</head>
+<body>
+<!-- Top bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+  <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-[1920px] mx-auto">
+    <div class="text-xl font-bold tracking-tighter">
+      <a href="index.html" class="hover:opacity-80 transition-opacity">CAR VISION</a>
+    </div>
+    <div class="hidden md:flex items-center gap-8 text-sm tracking-tight text-stone-500">
+      <a class="hover:text-black transition-colors" href="index.html">الصفحة الرئيسية</a>
+      <a class="text-black border-b-2 border-black pb-1" href="#">المنهجية</a>
+    </div>
+    <a href="methodology_en.html" class="flex items-center gap-2 px-4 py-2 border border-stone-200 rounded-md text-sm font-medium hover:bg-stone-50 transition-colors">
+      <span class="material-symbols-outlined text-base">language</span>
+      <span>EN</span>
+    </a>
+  </div>
+  <div class="bg-stone-100 h-[1px] w-full"></div>
+</nav>
+
+<main class="pt-32 pb-20 px-6 md:px-12 max-w-[1400px] mx-auto">
+  <header class="text-center mb-16">
+    <span class="inline-block px-3 py-1 bg-stone-200 text-black font-mono text-xs tracking-widest uppercase mb-6">Methodology v1.0</span>
+    <h1 class="text-5xl md:text-6xl font-bold tracking-tight mb-4">المنهجية المقترحة</h1>
+    <p class="text-stone-500 text-lg max-w-2xl mx-auto">
+      نظرة عامة على خط أنابيب البيانات: من البيانات الخام إلى واجهة المستخدم، عبر خمس مراحل متتابعة.
+    </p>
+  </header>
+
+  <!-- Pipeline overview -->
+  <section class="mb-20">
+    <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-stone-500 mb-6 text-center">نظرة عامة على خط الأنابيب</h2>
+    <div class="bg-white border border-stone-200 rounded-xl p-8 overflow-x-auto">
+      <div class="flex items-center justify-center gap-3 min-w-max" style="direction: rtl;">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="font-bold text-base mb-1">البيانات الخام</div>
+          <div class="text-xs text-stone-500 font-mono">JSON + PNG</div>
+        </div>
+        <div class="arrow">←</div>
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="font-bold text-base mb-1">المعالجة المسبقة</div>
+          <div class="text-xs text-stone-500 font-mono">Notebooks</div>
+        </div>
+        <div class="arrow">←</div>
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="font-bold text-base mb-1">التدريب</div>
+          <div class="text-xs text-stone-500 font-mono">Ultralytics</div>
+        </div>
+        <div class="arrow">←</div>
+        <!-- Step 4 -->
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="font-bold text-base mb-1">الاستدلال</div>
+          <div class="text-xs text-stone-500 font-mono">YOLOv8-seg</div>
+        </div>
+        <div class="arrow">←</div>
+        <!-- Step 5 -->
+        <div class="step-card">
+          <div class="step-num">5</div>
+          <div class="font-bold text-base mb-1">واجهة Streamlit</div>
+          <div class="text-xs text-stone-500 font-mono">Upload + View</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed steps -->
+  <section class="space-y-6">
+    <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-stone-500 mb-2 text-center">تفاصيل المراحل</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white border border-stone-200 rounded-xl p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="step-num m-0">1</span>
+          <h3 class="text-xl font-bold">البيانات الخام</h3>
+        </div>
+        <p class="text-sm text-stone-600 leading-relaxed">
+          مجموعة بيانات الصور بصيغة <span class="font-mono">PNG</span> مرفقة بملفات تعليق توضيحي بصيغة <span class="font-mono">JSON</span> تحتوي على حدود الأضرار وفئاتها.
+        </p>
+      </div>
+      <div class="bg-white border border-stone-200 rounded-xl p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="step-num m-0">2</span>
+          <h3 class="text-xl font-bold">المعالجة المسبقة</h3>
+        </div>
+        <p class="text-sm text-stone-600 leading-relaxed">
+          باستخدام دفاتر Jupyter، يتم تنظيف البيانات وتحويلها إلى صيغة YOLO، وتقسيمها إلى مجموعات تدريب/تحقق/اختبار.
+        </p>
+      </div>
+      <div class="bg-white border border-stone-200 rounded-xl p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="step-num m-0">3</span>
+          <h3 class="text-xl font-bold">التدريب</h3>
+        </div>
+        <p class="text-sm text-stone-600 leading-relaxed">
+          نستخدم إطار عمل <span class="font-mono">Ultralytics</span> لتدريب نموذج تجزئة على البيانات المعالجة، مع تتبع المقاييس والأوزان.
+        </p>
+      </div>
+      <div class="bg-white border border-stone-200 rounded-xl p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="step-num m-0">4</span>
+          <h3 class="text-xl font-bold">الاستدلال</h3>
+        </div>
+        <p class="text-sm text-stone-600 leading-relaxed">
+          يقوم نموذج <span class="font-mono">YOLOv8-seg</span> المُدرَّب بتحليل الصور المرفوعة وإنتاج أقنعة تجزئة دقيقة لمناطق الضرر.
+        </p>
+      </div>
+      <div class="bg-white border border-stone-200 rounded-xl p-6 md:col-span-2">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="step-num m-0">5</span>
+          <h3 class="text-xl font-bold">واجهة Streamlit</h3>
+        </div>
+        <p class="text-sm text-stone-600 leading-relaxed">
+          واجهة ويب تفاعلية مبنية بـ <span class="font-mono">Streamlit</span> تتيح للمستخدم رفع الصور وعرض نتائج التحليل والتقرير النهائي.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="mt-16 text-center">
+    <a href="index.html" class="inline-block text-sm text-stone-500 hover:text-black transition-colors">العودة للرئيسية &larr;</a>
+  </div>
+</main>
+</body>
+</html>

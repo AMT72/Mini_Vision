@@ -90,11 +90,13 @@
   }
   @keyframes slide-infinite {
     0% { transform: translateX(0); }
-    100% { transform: translateX(50%); }
+    100% { transform: translateX(-50%); }
   }
   .animate-slide {
     animation: slide-infinite 30s linear infinite;
+    will-change: transform;
   }
+  .pipeline-track { direction: ltr; }
   .carousel-item {
     transition: opacity 1s ease-in-out;
   }
@@ -108,8 +110,8 @@
       </div>
 <div class="hidden md:flex items-center gap-8 font-headline tracking-tight text-stone-500">
 <a class="text-black dark:text-white border-b-2 border-black dark:border-white pb-1 transition-colors" href="#" style="">Home</a>
-<a class="hover:text-black dark:hover:text-white transition-colors" href="#" style="">Features</a>
-<a class="hover:text-black dark:hover:text-white transition-colors" href="#" style="">Contact Us</a>
+<a class="hover:text-black dark:hover:text-white transition-colors" href="#technology" style="">Features</a>
+<a class="hover:text-black dark:hover:text-white transition-colors" href="#support" style="">Contact Us</a>
 </div>
 <button class="flex items-center gap-2 px-4 py-2 border border-stone-200 dark:border-stone-800 rounded-md text-sm font-medium hover:bg-stone-50 dark:hover:bg-stone-900 transition-colors active:scale-95 duration-200" style="">
 <span class="material-symbols-outlined text-lg" style="">language</span>
@@ -131,46 +133,62 @@
 <button class="primary-gradient text-on-primary px-16 py-6 rounded-md font-bold text-xl hover:shadow-xl transition-all active:scale-[0.98] border-2 border-primary min-w-[280px]" style="">
               Assess My Car
 </button>
-<button class="bg-surface-container-highest text-primary px-10 py-6 rounded-md font-bold text-lg hover:bg-surface-container-high transition-colors active:scale-[0.98]" style="">
+<a href="methodology_en.html" class="bg-surface-container-highest text-primary px-10 py-6 rounded-md font-bold text-lg hover:bg-surface-container-high transition-colors active:scale-[0.98] inline-block text-center" style="">
               View Methodology
-            </button>
+            </a>
 </div>
 </div>
 <!-- Animated Pipeline Section using cropped regions of IMAGE_7 -->
 <div class="w-full relative mt-16 max-w-[1600px] mx-auto overflow-hidden pipeline-mask h-[400px]">
-<div class="flex gap-4 absolute left-0 top-0 animate-slide h-full" id="pipeline">
-<!-- Images from IMAGE_7 (Using segments via object-position/fit simulation or just multiple refs) -->
-<!-- For simulation purposes, we use the main image placeholder repeating with different crops -->
+<div class="flex gap-4 absolute left-0 top-0 animate-slide h-full pipeline-track" id="pipeline">
 <div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 0% 0%;"/>
+<img class="w-full h-full object-cover" src="full_demo_ui/images/1.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 33% 0%;"/>
+<img class="w-full h-full object-cover" src="full_demo_ui/images/2.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 66% 0%;"/>
+<img class="w-full h-full object-cover" src="full_demo_ui/images/3.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 100% 0%;"/>
+<img class="w-full h-full object-cover" src="full_demo_ui/images/4.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 0% 100%;"/>
+<img class="w-full h-full object-cover" src="full_demo_ui/images/5.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 50% 100%;"/>
+<img class="w-full h-full object-cover" src="full_demo_ui/images/6.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
-<!-- Duplicate for seamless loop -->
-<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 0% 0%;"/>
+<!-- Duplicate set for seamless loop -->
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover" src="full_demo_ui/images/1.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
 </div>
-<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-150" src="https://lh3.googleusercontent.com/aida/ADBb0ugTA4CdNXETkN5n5048DC7WkYm9fYhAdsb4tWY1bEEUMTpNljPzCNS4eXeTl-GgZ3Llz1Np372aWweAyBsdW9uwCYzVX3mxRh6lrXDvR3QSdZVndJJBO9N-u9b4RmziaZTkZGnG47vcPoKcw4366LU5_9ZtreGVhClN5iT0UUqrvQurVUeQEWthzLGNwnDDLzOKEXzlHpV7p419RWbq2nsHTJd2-h4PG8sI2HZ6xLBKCXt0IVVJ3qdeiuyAqHV4OK1m98GBlelvI0E" style="object-position: 33% 0%;"/>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover" src="full_demo_ui/images/2.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover" src="full_demo_ui/images/3.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover" src="full_demo_ui/images/4.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover" src="full_demo_ui/images/5.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[400px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover" src="full_demo_ui/images/6.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
 </div>
 </div>
 </div><div class="flex justify-center w-full mt-8 mb-4">
@@ -234,7 +252,7 @@
 <!-- Data Integrity Image Block -->
 <div class="relative overflow-hidden rounded-xl shadow-sm group h-[450px]">
 <img alt="Futuristic technology" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnq4rLcMorQRRYdpLEiHVUV0aTFgWKMqChlHjOAu0vZ7T_oAqBNoZv_3q6vPdCma7riEaLTx3jGPhDU3O1RuXqhMxjizoKg6YtbjABm-WFfTaozOrRUFq2XAnzjpB2lUHKU6k22khggjXWWSUrj8ibKhPW1WknazxHUy6CEwGvsg3lnMoAMvrz03ibe4vtVO-_fvkeg0laXnCZB89asJlXx0fNTkAw3hVTS5Tk59FnOpywgpq8K5BeydwDMCnItUr1EDbSfkGtI_rL" style=""/>
-<div class="absolute inset-0 bg-black/60 flex items-center p-8 text-left">
+<div class="absolute inset-0 bg-black/60 flex items-center justify-center p-8 text-center">
 <h3 class="text-2xl font-headline font-bold text-white" style="">S C A L A B L E<br/>A R C H I T E C T U R E</h3>
 </div>
 </div>
