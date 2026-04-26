@@ -187,10 +187,8 @@ Download or extract the datasets into the `data/` folder following the structure
 
 ## 👥 Team
 
-*Intelligent Systems Design — University Course Project*
+* **Abdullah Ghulam** – [GitHub](https://github.com/AbdullahGhulam) | [LinkedIn](https://www.linkedin.com/in/abdullah-ghulam)
 
----
+* **Azzam Abdullah** – [GitHub]() | [LinkedIn]()
 
-## 📜 License
-
-This project is developed for academic purposes.
+* **Samer Mawlawi** – [GitHub](https://github.com/SamerMawlawi) | [LinkedIn](www.linkedin.com/in/samermawlawi)
