@@ -169,12 +169,7 @@ Download or extract the datasets into the `data/` folder following the structure
                      │  Streamlit UI    │◀────│  Inference      │
                      │  (Upload + View) │     │  (YOLOv8-seg)   │
                      └──────────────────┘     └─────────────────┘
-                                                       │
-                                                       ▼
-                                              ┌─────────────────┐
-                                              │  XAI / Grad-CAM │
-                                              │  (Captum)       │
-                                              └─────────────────┘
+                                     
 ```
 
 1. **Data Preprocessing** — Merge and convert raw annotations into a unified YOLO-format dataset.
