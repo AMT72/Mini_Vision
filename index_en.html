@@ -317,14 +317,14 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.onclick = () => window.location.href = 'assessment_en.html';
         }
         if(btn.innerText.includes('AR')) {
-            btn.onclick = () => window.location.href = 'index_ar.html';
+            btn.onclick = () => window.location.href = 'index.html';
         }
     });
 
     document.querySelectorAll('body *').forEach(el => {
         if(el.children.length === 0 && el.innerText.trim() === 'AR') {
             el.parentElement.style.cursor = 'pointer';
-            el.parentElement.onclick = () => window.location.href = 'index_ar.html';
+            el.parentElement.onclick = () => window.location.href = 'index.html';
         }
         if(el.children.length === 0 && (el.innerText.trim() === 'Return' || el.innerText.trim() === 'Dashboard')) {
             el.style.cursor = 'pointer';

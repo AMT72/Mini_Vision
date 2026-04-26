@@ -90,11 +90,13 @@
   }
   @keyframes slide-infinite {
     0% { transform: translateX(0); }
-    100% { transform: translateX(50%); }
+    100% { transform: translateX(-50%); }
   }
   .animate-slide {
     animation: slide-infinite 30s linear infinite;
+    will-change: transform;
   }
+  .pipeline-track { direction: ltr; }
   .carousel-item {
     transition: opacity 1s ease-in-out;
   }
@@ -138,40 +140,55 @@
 </div>
 <!-- Animated Pipeline Section using cropped regions of IMAGE_7 -->
 <div class="w-full relative mt-16 max-w-[1600px] mx-auto overflow-hidden pipeline-mask h-[400px]">
-<div class="flex gap-4 absolute left-0 top-0 animate-slide h-full" id="pipeline">
-<!-- Images from IMAGE_7 (Using segments via object-position/fit simulation or just multiple refs) -->
-<!-- For simulation purposes, we use the main image placeholder repeating with different crops -->
- <!-- crop the image to better fit the rectangle, they are too big now -->
+<div class="flex gap-4 absolute left-0 top-0 animate-slide h-full pipeline-track" id="pipeline">
 <div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/1.png" style="object-position: 0% 0%;"/>
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/1.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/2.png" style="object-position: 33% 0%;"/>
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/2.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/3.png" style="object-position: 66% 0%;"/>
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/3.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/4.png" style="object-position: 100% 0%;"/>
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/4.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/5.png" style="object-position: 0% 100%;"/>
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/5.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
 <div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/6.png" style="object-position: 50% 100%;"/>
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/6.png"/>
 <div class="absolute inset-0 bg-black/10"></div>
 </div>
-<!-- Duplicate for seamless loop -->
-<div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/1.png" style="object-position: 0% 0%;"/>
+<!-- Duplicate set for seamless loop -->
+<div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/1.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
 </div>
-<div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative">
-<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/2.png" style="object-position: 33% 0%;"/>
+<div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/2.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/3.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/4.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/5.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="flex-shrink-0 w-[600px] h-full rounded-xl overflow-hidden bg-surface-container-low shadow-lg relative" aria-hidden="true">
+<img class="w-full h-full object-cover scale-55" src="full_demo_ui/images/6.png"/>
+<div class="absolute inset-0 bg-black/10"></div>
 </div>
 </div>
 </div><div class="flex justify-center w-full mt-8 mb-4">

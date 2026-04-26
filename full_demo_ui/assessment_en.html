@@ -1,72 +1,134 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini_Vision - Image Upload</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini_Vision - Image Upload</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#000000",
+          surface: "#f9f9fb",
+          "surface-container-low": "#f3f3f5",
+          "surface-container-lowest": "#ffffff",
+          "surface-container-high": "#e8e8ea",
+          "on-surface-variant": "#474747",
+          "outline-variant": "#c6c6c6",
+          secondary: "#5a5f66",
+        },
+        fontFamily: {
+          headline: ["Space Grotesk", "sans-serif"],
+          body: ["Inter", "sans-serif"],
+        },
+      },
+    },
+  }
+</script>
+<style>
+  body {
+    background-color: #f9f9fb;
+    font-family: 'Inter', sans-serif;
+    color: #1a1c1d;
+  }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .primary-gradient {
+    background: linear-gradient(135deg, #000000 0%, #3b3b3b 100%);
+  }
+  .loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(249, 249, 251, 0.92);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .loading-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+</style>
 </head>
-<body lang="en">
-    <a href="assessment_ar.html" class="lang-switch">
-        <span class="material-symbols-outlined" style="font-size: 1.125rem;">language</span>
-        <span style="font-family: 'Space Grotesk', sans-serif;">AR</span>
-    </a>
+<body>
+<!-- Top bar -->
+<div class="flex justify-between items-center px-8 py-6 max-w-[1200px] mx-auto">
+  <a href="index_en.html" class="text-sm text-stone-500 hover:text-black transition-colors">&larr; Back to Home</a>
+  <a href="assessment_ar.html" class="flex items-center gap-2 px-4 py-2 border border-stone-200 rounded-md text-sm font-medium hover:bg-stone-50 transition-colors">
+    <span class="material-symbols-outlined text-base">language</span>
+    <span class="font-headline">AR</span>
+  </a>
+</div>
 
-    <!-- Navigation Breadcrumbs -->
-    <div style="padding: 2rem 2rem 0; width: 100%; max-width: 1200px; margin: 0 auto; display: flex; gap: 2rem;">
-        <a href="index_en.html" class="label-md" style="color:#777777;">&larr; Back to Home</a>
+<main class="max-w-[1100px] mx-auto px-8 pb-20">
+  <!-- Heading -->
+  <header class="text-center mb-10">
+    <h1 class="font-headline text-5xl md:text-6xl font-bold tracking-tight text-primary mb-4">Image Upload</h1>
+    <p class="text-on-surface-variant text-lg">The first step in the smart assessment process. Select an image source.</p>
+  </header>
+
+  <!-- Upload area -->
+  <div id="upload-trigger" class="bg-surface-container-lowest border border-dashed border-outline-variant rounded-xl py-20 px-8 text-center cursor-pointer hover:bg-stone-50 transition-colors mb-8">
+    <div class="flex justify-center mb-4">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+      </svg>
     </div>
+    <h3 class="font-headline text-lg font-bold mb-2">Drag and drop images here</h3>
+    <p class="text-sm text-on-surface-variant">Or click to browse from gallery</p>
+  </div>
 
-    <div class="container hero" style="min-height: 70vh;">
-        <h1 class="display-lg" style="font-size: 3rem;">Image Upload</h1>
-        <p class="body-lg mb-4">The first step in the smart assessment process. Select an image source.</p>
-        
-        <div class="upload-area" id="upload-trigger">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 1rem;">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
-            </svg>
-            <h3 style="margin-bottom: 0.5rem;">Drag and drop images here</h3>
-            <p style="color: #747575;">Or click to browse from gallery</p>
+  <!-- Guidelines card -->
+  <div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div class="rounded-lg overflow-hidden">
+        <img src="images/source.png" alt="Example camera angle" class="w-full h-full object-cover"/>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-6">Photography Guidelines</h4>
+        <div class="space-y-5">
+          <div>
+            <strong class="block text-base font-bold mb-1">Optimal Lighting</strong>
+            <p class="text-sm text-on-surface-variant">Ensure good/natural lighting for best results.</p>
+          </div>
+          <div>
+            <strong class="block text-base font-bold mb-1">Analysis Angle</strong>
+            <p class="text-sm text-on-surface-variant">Capture the image at a 45-degree angle for accurate structural analysis.</p>
+          </div>
+          <div>
+            <strong class="block text-base font-bold mb-1">Avoid Reflections</strong>
+            <p class="text-sm text-on-surface-variant">Avoid direct glare or strong shadows that might hide details.</p>
+          </div>
         </div>
-
-        <div class="card ghost-border" style="display:flex; gap:2rem; align-items:flex-start; flex-wrap:wrap;">
-            <div style="flex:1; min-width:300px;">
-                <h4 class="label-md mb-2">Photography Guidelines</h4>
-                <div class="grid-3" style="grid-template-columns: 1fr;">
-                    <div style="margin-bottom:1rem;">
-                        <strong>Optimal Lighting</strong>
-                        <p style="font-size: 0.9rem; color: #5a5f66;">Ensure good/natural lighting for best results.</p>
-                    </div>
-                    <div style="margin-bottom:1rem;">
-                        <strong>Analysis Angle</strong>
-                        <p style="font-size: 0.9rem; color: #5a5f66;">Capture the image at a 45-degree angle for accurate structural analysis.</p>
-                    </div>
-                    <div>
-                        <strong>Avoid Reflections</strong>
-                        <p style="font-size: 0.9rem; color: #5a5f66;">Avoid direct glare or strong shadows that might hide details.</p>
-                    </div>
-                </div>
-            </div>
-            <div style="flex:1; min-width:300px;">
-                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1c8WGZT2LiSyKTE3GhJnYCLAS6prZSFvPSvRAdawwBgRCv4H69QSon5OaVmf4MyiB0lJEG6NbwcilnGtg2U-nKKy4af8Hj7N2agH7WgybYc9-GSRyhxhRlSgeQguJMiZxAJo9J2NboWyrIADyVIiWdpoOfIznEHATU1b-XHow6zmd1lJpub9MDM4JILsUJ9KMrHETcx8xeLrSUoicKbetQyetUi9xg-71EXZytPv_3T2f0Y8jeEvmLSofakVaLvlXWXRuA_Syzq_q" alt="Example Camera Angle" style="width:100%; border-radius:var(--radius-sm); object-fit:cover;">
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
+</main>
 
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loading-overlay">
-        <div class="display-lg" style="font-size: 2rem;">Processing & Analyzing...</div>
-        <p class="body-lg">AI is currently examining the damage.</p>
-    </div>
+<!-- Loading Overlay -->
+<div class="loading-overlay" id="loading-overlay">
+  <div class="font-headline text-3xl font-bold mb-2">Processing &amp; Analyzing...</div>
+  <p class="text-on-surface-variant">AI is currently examining the damage.</p>
+</div>
 
-    <script>
-        document.getElementById('upload-trigger').addEventListener('click', () => {
-            document.getElementById('loading-overlay').classList.add('active');
-            setTimeout(() => {
-                window.location.href = 'report_en.html';
-            }, 3000);
-        });
-    </script>
+<script>
+  document.getElementById('upload-trigger').addEventListener('click', () => {
+    document.getElementById('loading-overlay').classList.add('active');
+    setTimeout(() => {
+      window.location.href = 'report_en.html';
+    }, 3000);
+  });
+</script>
 </body>
 </html>
