@@ -145,7 +145,7 @@ Expected output (example with NVIDIA GPU):
 Python Version: 3.11.9
 PyTorch Version: 2.x.x
 ✅ NVIDIA GPU Detected (CUDA)
-Device: NVIDIA GeForce RTX XXXX
+Device: NVIDIA GeForce RTX 3060ti
 ```
 
 > The script also detects **AMD (ROCm)** and **Apple Silicon (MPS)** GPUs.
