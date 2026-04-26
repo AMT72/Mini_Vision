@@ -184,6 +184,6 @@ Download or extract the datasets into the `data/` folder following the structure
 
 * **Abdullah Ghulam** – [GitHub](https://github.com/AbdullahGhulam) | [LinkedIn](https://www.linkedin.com/in/abdullah-ghulam)
 
-* **Azzam Abdullah** – [GitHub]() | [LinkedIn]()
+* **Azzam Abdullah** – [GitHub](https://github.com/AMT72) | [LinkedIn](https://www.linkedin.com/in/amt72/)
 
 * **Samer Mawlawi** – [GitHub](https://github.com/SamerMawlawi) | [LinkedIn](www.linkedin.com/in/samermawlawi)
