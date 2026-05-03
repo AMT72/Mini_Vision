@@ -71,7 +71,7 @@
         <div class="max-w-3xl">
           <span id="report-id" class="text-xs uppercase tracking-[0.2em] text-outline mb-4 block"></span>
           <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
-            تحليل الأضرار<br/>بالذكاء الاصطناعي
+            تحليل الأضرار<br/>باستخدام الذكاء الاصطناعي
           </h1>
           <p id="report-subtitle" class="text-secondary text-lg max-w-xl"></p>
         </div>
@@ -100,12 +100,12 @@
         </div>
 
         <div class="flex flex-wrap gap-x-4 gap-y-2 px-1">
-          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-dent"></div><span class="text-[10px] font-bold uppercase text-secondary">طرمبة</span></div>
+          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-dent"></div><span class="text-[10px] font-bold uppercase text-secondary">طعجة</span></div>
           <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-scratch"></div><span class="text-[10px] font-bold uppercase text-secondary">خدش</span></div>
-          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-crack"></div><span class="text-[10px] font-bold uppercase text-secondary">تشقق</span></div>
-          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-glass-shatter"></div><span class="text-[10px] font-bold uppercase text-secondary">زجاج محطم</span></div>
-          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-lamp-broken"></div><span class="text-[10px] font-bold uppercase text-secondary">كشاف مكسور</span></div>
-          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-tire-flat"></div><span class="text-[10px] font-bold uppercase text-secondary">إطار مثقوب</span></div>
+          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-crack"></div><span class="text-[10px] font-bold uppercase text-secondary">كسر</span></div>
+          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-glass-shatter"></div><span class="text-[10px] font-bold uppercase text-secondary">زجاج مهشم</span></div>
+          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-lamp-broken"></div><span class="text-[10px] font-bold uppercase text-secondary">شمعة مكسورة</span></div>
+          <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-tire-flat"></div><span class="text-[10px] font-bold uppercase text-secondary">كفر مبنشر</span></div>
         </div>
 
       </div>
@@ -117,7 +117,7 @@
           <h2 class="font-bold text-xl tracking-tight mb-4">ملخص النتائج</h2>
           <div id="findings-list" class="space-y-3"></div>
           <p id="no-damage-msg" class="hidden text-sm text-on-surface-variant italic">
-            لم يتم اكتشاف أضرار. تبدو المركبة في حالة جيدة.
+            ما فيها أضرار، السيارة نظيفة ⭐.
           </p>
         </div>
 
@@ -174,13 +174,13 @@
 
 <script>
   const SEV_AR = {
-    critical: { label: 'حرج',    border: 'border-red-500',   text: 'text-red-600'   },
+    critical: { label: 'قوي',    border: 'border-red-500',   text: 'text-red-600'   },
     medium:   { label: 'متوسط',  border: 'border-amber-500', text: 'text-amber-600' },
     minor:    { label: 'بسيط',   border: 'border-blue-400',  text: 'text-blue-600'  },
   };
   const DAMAGE_AR = {
-    'dent': 'طرمبة', 'scratch': 'خدش', 'crack': 'تشقق',
-    'glass shatter': 'زجاج محطم', 'lamp broken': 'كشاف مكسور', 'tire flat': 'إطار مثقوب',
+    'dent': 'طعجة', 'scratch': 'خدش', 'crack': 'كسر',
+    'glass shatter': 'زجاج مهشم', 'lamp broken': 'شمعة مكسورة', 'tire flat': 'كفر مبنشر',
   };
 
   const raw = sessionStorage.getItem('minivision_result');
