@@ -64,14 +64,14 @@
 
   <header class="text-center mb-10">
     <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-primary mb-4">تقييم المركبة</h1>
-    <p class="text-on-surface-variant text-lg">ارفع صورة سيارتك أو اختر أحد الأمثلة أدناه.</p>
+    <p class="text-on-surface-variant text-lg">ارفع صورة سيارتك الآن أو اختر مثالًا لتجربة سريعة 👇</p>
   </header>
 
   <div id="drop-zone" class="bg-surface-container-lowest border-2 border-dashed border-outline-variant rounded-xl py-16 px-8 text-center cursor-pointer hover:bg-stone-50 transition-colors mb-4">
     <div class="flex justify-center mb-4">
       <span class="material-symbols-outlined text-5xl text-stone-400">cloud_upload</span>
     </div>
-    <h3 class="text-lg font-bold mb-2">اسحب وأسقط الصورة هنا</h3>
+    <h3 class="text-lg font-bold mb-2">اسحب الصورة وأفلتها هنا</h3>
     <p class="text-sm text-on-surface-variant mb-5">يدعم JPG وPNG وWEBP</p>
     <button onclick="document.getElementById('file-input').click()"
       class="inline-flex items-center gap-2 px-6 py-2.5 bg-black text-white rounded-md text-sm font-bold hover:bg-stone-800 transition-colors">
@@ -89,8 +89,8 @@
         <img src="/static/examples/1.jpg" alt="مثال 1" class="w-full h-44 object-cover rounded-xl"/>
         <div class="overlay rounded-xl"><span class="text-white font-bold text-sm">تحليل ←</span></div>
         <div class="px-3 py-2">
-          <p class="text-xs font-bold">تلف جانبي</p>
-          <p class="text-[11px] text-secondary">طرمبة · إطار مثقوب · تشقق</p>
+          <p class="text-xs font-bold">صدمة على الجنب</p>
+          <p class="text-[11px] text-secondary">طعجة · كفر مبنشر · كسر</p>
         </div>
       </div>
 
@@ -98,8 +98,8 @@
         <img src="/static/examples/2.jpg" alt="مثال 2" class="w-full h-44 object-cover rounded-xl"/>
         <div class="overlay rounded-xl"><span class="text-white font-bold text-sm">تحليل ←</span></div>
         <div class="px-3 py-2">
-          <p class="text-xs font-bold">تلف خلفي</p>
-          <p class="text-[11px] text-secondary">كشاف مكسور · خدوش</p>
+          <p class="text-xs font-bold">صدمة خلفية</p>
+          <p class="text-[11px] text-secondary">شمعة مكسورة · خدوش</p>
         </div>
       </div>
 
@@ -108,7 +108,7 @@
         <div class="overlay rounded-xl"><span class="text-white font-bold text-sm">تحليل ←</span></div>
         <div class="px-3 py-2">
           <p class="text-xs font-bold">خدوش خلفية</p>
-          <p class="text-[11px] text-secondary">خدوش متعددة</p>
+          <p class="text-[11px] text-secondary">خدوش كثيرة</p>
         </div>
       </div>
 
@@ -116,8 +116,8 @@
         <img src="/static/examples/4.jpg" alt="مثال 4" class="w-full h-44 object-cover rounded-xl"/>
         <div class="overlay rounded-xl"><span class="text-white font-bold text-sm">تحليل ←</span></div>
         <div class="px-3 py-2">
-          <p class="text-xs font-bold">تلف أمامي</p>
-          <p class="text-[11px] text-secondary">خدش · تشقق · كشاف</p>
+          <p class="text-xs font-bold">صدمة أمامية</p>
+          <p class="text-[11px] text-secondary">خدش · كسر · شمعة</p>
         </div>
       </div>
 
@@ -127,19 +127,19 @@
   <div class="bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <div>
-        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-6">إرشادات التصوير</h4>
+        <h4 class="text-xs font-bold uppercase tracking-[0.2em] text-secondary mb-6">نصائح التصوير</h4>
         <div class="space-y-5">
           <div>
-            <strong class="block text-base font-bold mb-1">إضاءة مثالية</strong>
-            <p class="text-sm text-on-surface-variant">تأكد من الإضاءة الطبيعية الجيدة للحصول على أفضل النتائج.</p>
+            <strong class="block text-base font-bold mb-1">إضاءة كويسة</strong>
+            <p class="text-sm text-on-surface-variant">خلي الإضاءة واضحة، ويفضل تكون طبيعية عشان النتيجة تطلع أدق.</p>
           </div>
           <div>
-            <strong class="block text-base font-bold mb-1">زاوية التحليل</strong>
-            <p class="text-sm text-on-surface-variant">التقط الصورة بشكل مباشر أو بزاوية طفيفة لتحليل دقيق.</p>
+            <strong class="block text-base font-bold mb-1">صوّرها بشكل واضح</strong>
+            <p class="text-sm text-on-surface-variant">صوّر السيارة بشكل مباشر أو بميل خفيف عشان النتائج تكون ممتازة.</p>
           </div>
           <div>
-            <strong class="block text-base font-bold mb-1">تجنب الانعكاسات</strong>
-            <p class="text-sm text-on-surface-variant">تجنب الوهج المباشر أو الظلال القوية التي قد تخفي التفاصيل.</p>
+            <strong class="block text-base font-bold mb-1">لا يكون فيه انعكاس</strong>
+            <p class="text-sm text-on-surface-variant">حاول تبعد عن اللمعة القوية أو الظلال اللي تغطي التفاصيل.</p>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@
 <div class="loading-overlay" id="loading-overlay">
   <div class="spinner"></div>
   <div class="text-2xl font-bold mb-2">جارٍ تحليل الأضرار…</div>
-  <p class="text-on-surface-variant text-sm">الذكاء الاصطناعي يعمل. قد يستغرق ذلك بضع ثوانٍ.</p>
+  <p class="text-on-surface-variant text-sm">نحلل الصورة الآن 👀… ثواني ونرجع لك بالنتيجة.</p>
 </div>
 
 <script>
