@@ -1,9 +1,15 @@
 """
 MiniVision Flask server.
 Serves the frontend and exposes /api/analyze for the two-stage damage pipeline.
+
+Model loading strategy (in priority order):
+  1. Local paths (development) — models/Parts Detector .../best.pt + models/CSK_Model/.../epoch60.pt
+  2. HF Hub download (production on HF Spaces) — set HF_MODEL_REPO env var to your model repo id
+     e.g.  HF_MODEL_REPO=YourUsername/minivision-models
 """
 from __future__ import annotations
 
+import os
 import sys
 import uuid
 from pathlib import Path
@@ -17,11 +23,41 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from pipeline import InspectionPipeline  # noqa: E402
 
+
+def _resolve_models() -> tuple[Path, Path]:
+    """Return (parts_weights, damage_weights) — local first, HF Hub fallback."""
+    local_parts  = ROOT / "models" / "Parts Detector (YOLO26)" / "weights" / "best.pt"
+    local_damage = ROOT / "models" / "CSK_Model" / "weights" / "epoch60.pt"
+
+    if local_parts.exists() and local_damage.exists():
+        print("Using local model weights.")
+        return local_parts, local_damage
+
+    # HF Hub fallback
+    repo_id = os.environ.get("HF_MODEL_REPO", "")
+    if not repo_id:
+        raise RuntimeError(
+            "Model weights not found locally and HF_MODEL_REPO env var is not set.\n"
+            "Set HF_MODEL_REPO=YourUsername/minivision-models"
+        )
+
+    print(f"Downloading weights from HF Hub: {repo_id} …")
+    from huggingface_hub import hf_hub_download
+    cache = ROOT / "model_cache"
+    cache.mkdir(exist_ok=True)
+
+    parts_pt  = hf_hub_download(repo_id=repo_id, filename="parts_best.pt",  local_dir=str(cache))
+    damage_pt = hf_hub_download(repo_id=repo_id, filename="epoch60.pt",      local_dir=str(cache))
+    print("Weights downloaded.")
+    return Path(parts_pt), Path(damage_pt)
+
+
 app = Flask(__name__, static_folder="static", static_url_path="/static")
 
-# ── Load pipeline once at startup (keeps models in VRAM) ─────────────────────
+# ── Load pipeline once at startup (keeps models in VRAM / RAM) ───────────────
 print("Loading inspection pipeline…")
-pipe = InspectionPipeline()
+parts_weights, damage_weights = _resolve_models()
+pipe = InspectionPipeline(parts_model=parts_weights, damage_model=damage_weights)
 print("Pipeline ready.")
 
 # ── Colour palette per damage type (BGR for OpenCV) ──────────────────────────
@@ -199,4 +235,6 @@ def analyze():
 
 # ── Run ───────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    # HF Spaces requires port 7860; local dev uses 5000
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
