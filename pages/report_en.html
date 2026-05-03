@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MiniVision – Damage Report</title>
+  <title>Car Vision – Damage Report</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -51,7 +51,7 @@
   <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm no-print">
     <div class="flex justify-between items-center px-6 md:px-12 py-4 max-w-[1920px] mx-auto">
       <a href="/" class="text-xl font-bold tracking-tighter text-black font-headline hover:opacity-80 transition-opacity">
-        MiniVision
+        Car Vision
       </a>
       <div class="hidden md:flex items-center space-x-8 font-headline tracking-tight">
         <a class="text-stone-500 hover:text-black transition-colors" href="/">Home</a>
@@ -81,16 +81,10 @@
   <main id="report-main" class="pt-24 pb-20 px-6 md:px-12 max-w-[1920px] mx-auto">
 
     <!-- Header -->
-    <header class="mb-10">
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div class="max-w-3xl">
-          <span id="report-id" class="font-body text-xs uppercase tracking-[0.2em] text-outline mb-4 block"></span>
-          <h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
-            Damage Analysis<br/>by Artificial Intelligence
-          </h1>
-          <p id="report-subtitle" class="text-secondary text-lg max-w-xl"></p>
-        </div>
-      </div>
+    <header class="mb-10 text-center w-full">
+      <h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6 w-full">
+        Damage Report by Artificial Intelligence
+      </h1>
     </header>
 
     <!-- Main content grid -->
@@ -102,7 +96,7 @@
         <!-- Findings Summary -->
         <div>
           <h2 class="font-headline text-xl font-bold tracking-tight mb-4">Findings Summary</h2>
-          <div id="findings-list" class="space-y-3">
+          <div id="findings-list" class="grid grid-cols-3 gap-3">
             <!-- Populated by JS -->
           </div>
           <p id="no-damage-msg" class="hidden text-sm text-on-surface-variant italic">
@@ -110,10 +104,10 @@
           </p>
         </div>
 
-        <!-- Smart Validation -->
+        <!-- Additional Info -->
         <div class="border-t border-outline-variant/20 pt-4 mt-auto">
           <div class="flex items-center justify-between mb-4">
-            <h2 class="font-headline text-xl font-bold tracking-tight">Smart Validation</h2>
+            <h2 class="font-headline text-xl font-bold tracking-tight">Additional Info</h2>
             <div class="flex items-center gap-2 bg-green-50 px-3 py-1 rounded border border-green-100">
               <div class="w-2 h-2 bg-green-500 rounded-full"></div>
               <span class="text-[10px] font-bold uppercase text-green-700">Verified</span>
@@ -126,8 +120,8 @@
               <span id="stat-view" class="font-headline font-bold">—</span>
             </div>
             <div>
-              <span class="text-[10px] font-bold uppercase tracking-widest text-secondary block mb-1">Missing Parts</span>
-              <span id="stat-missing" class="font-headline font-bold">—</span>
+              <span class="text-[10px] font-bold uppercase tracking-widest text-secondary block mb-1">Report Date</span>
+              <span id="stat-date" class="font-headline font-bold">—</span>
             </div>
             <div>
               <span class="text-[10px] font-bold uppercase tracking-widest text-secondary block mb-1">Parts Detected</span>
@@ -166,16 +160,6 @@
           <img id="annotated-img" src="" alt="Annotated damage" class="w-full h-full object-contain min-h-[260px]"/>
         </div>
 
-        <!-- Original image -->
-        <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden relative">
-          <div class="absolute top-3 left-3 z-10">
-            <div class="bg-stone-500 text-white px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm">
-              Original
-            </div>
-          </div>
-          <img id="original-img" src="" alt="Original image" class="w-full object-contain max-h-64"/>
-        </div>
-
         <!-- Legend -->
         <div class="flex flex-wrap gap-x-4 gap-y-2 px-1">
           <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-dent"></div><span class="text-[10px] font-bold uppercase text-secondary">Dent</span></div>
@@ -186,13 +170,23 @@
           <div class="flex items-center gap-1.5"><div class="w-3 h-3 rounded-sm dot-tire-flat"></div><span class="text-[10px] font-bold uppercase text-secondary">Tire Flat</span></div>
         </div>
 
+        <!-- Original image -->
+        <div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden relative">
+          <div class="absolute top-3 left-3 z-10">
+            <div class="bg-stone-500 text-white px-3 py-1 text-[10px] font-bold tracking-[0.2em] uppercase rounded-sm">
+              Original
+            </div>
+          </div>
+          <img id="original-img" src="" alt="Original image" class="w-full object-contain max-h-64"/>
+        </div>
+
       </div>
     </div>
   </main>
 
   <footer class="w-full py-10 bg-stone-50 border-t border-stone-200 no-print">
     <div class="flex justify-between items-center px-6 md:px-12 max-w-[1440px] mx-auto">
-      <p class="font-body text-xs uppercase tracking-widest text-stone-400">© 2026 MiniVision. AI Damage Assessment.</p>
+      <p class="font-body text-xs uppercase tracking-widest text-stone-400">© 2026 Car Vision. AI Damage Assessment.</p>
       <a href="/pages/assessment_en.html" class="text-xs text-stone-400 hover:text-black transition-colors">New Assessment &rarr;</a>
     </div>
   </footer>
@@ -206,7 +200,25 @@
   };
 
   // ── Load result from sessionStorage ─────────────────────────────────────
-  const raw = sessionStorage.getItem('minivision_result');
+  // ?preview — inject mock data so the page renders for design/editing without a real run
+  const MOCK = {
+    annotated_image: "https://placehold.co/800x600/1a1c1d/ffffff?text=Annotated+Output",
+    input_image:     "https://placehold.co/800x600/e2e2e4/474747?text=Original+Image",
+    view_angles: ["side"], missing_parts: ["Back-wheel"],
+    parts: [
+      { name: "Hood",       bbox: [100,80,400,220],  confidence: 0.91,
+        damages: [{ damage_type:"dent",    confidence:0.84, bbox:[120,100,300,200], severity:"critical" },
+                  { damage_type:"scratch", confidence:0.61, bbox:[310,110,390,180], severity:"medium"   }] },
+      { name: "Front-door", bbox: [400,150,700,400], confidence: 0.78, damages: [] },
+      { name: "Fender",     bbox: [90,200,300,380],  confidence: 0.65,
+        damages: [{ damage_type:"crack", confidence:0.45, bbox:[100,220,240,340], severity:"minor" }] },
+    ],
+    full_image_damages: [
+      { damage_type:"lamp broken", confidence:0.88, bbox:[20,300,140,420], severity:"critical" }
+    ],
+  };
+  const isPreview = new URLSearchParams(window.location.search).has('preview');
+  const raw = isPreview ? JSON.stringify(MOCK) : sessionStorage.getItem('minivision_result');
   if (!raw) {
     document.getElementById('report-main').classList.add('hidden');
     document.getElementById('no-result').classList.remove('hidden');
@@ -220,17 +232,15 @@
     document.getElementById('original-img').src  = data.input_image;
 
     // Header
-    const ts = new Date().toLocaleString('en-GB', { hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
-    document.getElementById('report-id').textContent = `Report generated at ${ts}`;
-    const views = (data.view_angles || []).filter(v => v !== 'unknown').join(', ') || 'unknown';
-    document.getElementById('report-subtitle').textContent =
-      `AI-powered structural and aesthetic analysis. Detected view: ${views}.`;
+    const now = new Date();
+    const ts = now.toLocaleString('en-GB', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+    const VIEW_EN = { side: 'Side', front: 'Front', rear: 'Rear', back: 'Rear' };
+    const views = (data.view_angles || []).filter(v => v !== 'unknown')
+      .map(v => VIEW_EN[v.toLowerCase()] || v).join(', ') || 'Unknown';
 
     // Stats
-    document.getElementById('stat-view').textContent =
-      (data.view_angles || []).filter(v => v !== 'unknown').join(', ') || 'Unknown';
-    document.getElementById('stat-missing').textContent =
-      (data.missing_parts || []).length ? data.missing_parts.join(', ') : 'None';
+    document.getElementById('stat-view').textContent  = views;
+    document.getElementById('stat-date').textContent  = ts;
     document.getElementById('stat-parts').textContent = (data.parts || []).length;
 
     // Collect all damages (from parts + full image)
@@ -252,19 +262,55 @@
     if (allDamages.length === 0) {
       document.getElementById('no-damage-msg').classList.remove('hidden');
     } else {
-      allDamages.forEach(d => {
+      const annotatedImg = new Image();
+      annotatedImg.crossOrigin = 'anonymous';
+      annotatedImg.src = data.annotated_image;
+
+      allDamages.forEach((d, i) => {
         const sev = SEV[d.severity] || SEV.minor;
-        const partLabel = d.part && d.part !== 'scene' ? ` <span class="text-secondary">on ${d.part}</span>` : '';
+        const partLabel = d.part && d.part !== 'scene' ? `<span class="text-secondary text-[10px]"> on ${d.part}</span>` : '';
         const conf = Math.round(d.confidence * 100);
+        const canvasId = `crop-${i}`;
 
         list.insertAdjacentHTML('beforeend', `
-          <div class="relative pl-4 border-l-2 ${sev.border} py-1">
-            <div class="text-[10px] font-bold uppercase tracking-widest ${sev.text} mb-0.5">${sev.label}</div>
-            <div class="text-sm font-bold leading-tight capitalize">${d.damage_type}${partLabel}</div>
-            <div class="text-xs text-secondary mt-0.5">Confidence: ${conf}%</div>
+          <div class="rounded-lg border border-outline-variant/30 overflow-hidden bg-white flex flex-col">
+            <div class="bg-stone-100 overflow-hidden" style="height:100px;">
+              <canvas id="${canvasId}" class="w-full h-full" style="display:block;"></canvas>
+            </div>
+            <div class="border-l-2 ${sev.border} pl-2 py-2 px-3 flex flex-col gap-0.5 flex-1">
+              <div class="text-[9px] font-bold uppercase tracking-widest ${sev.text}">${sev.label}</div>
+              <div class="text-xs font-bold leading-tight capitalize">${d.damage_type}${partLabel}</div>
+              <div class="text-[10px] text-secondary">Confidence: ${conf}%</div>
+            </div>
           </div>
         `);
       });
+
+      function drawCrops() {
+        allDamages.forEach((d, i) => {
+          const canvas = document.getElementById(`crop-${i}`);
+          if (!canvas || !d.bbox) return;
+          const [x1, y1, x2, y2] = d.bbox;
+          const sw = x2 - x1, sh = y2 - y1;
+          if (sw <= 0 || sh <= 0) return;
+          const pad = Math.round(Math.max(sw, sh) * 0.15);
+          const sx = Math.max(0, x1 - pad), sy = Math.max(0, y1 - pad);
+          const sW = Math.min(annotatedImg.naturalWidth - sx, sw + pad * 2);
+          const sH = Math.min(annotatedImg.naturalHeight - sy, sh + pad * 2);
+          const cW = canvas.parentElement.offsetWidth || 200;
+          const cH = 100;
+          canvas.width  = cW;
+          canvas.height = cH;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(annotatedImg, sx, sy, sW, sH, 0, 0, cW, cH);
+        });
+      }
+
+      if (annotatedImg.complete && annotatedImg.naturalWidth) {
+        drawCrops();
+      } else {
+        annotatedImg.onload = drawCrops;
+      }
     }
   }
 </script>
