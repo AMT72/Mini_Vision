@@ -1,4 +1,4 @@
-# MiniVision — Team Deploy Guide
+# MiniVision — Team Deploy Guide !
 
 ## What you need
 - The code: this GitHub repo (UI branch)
