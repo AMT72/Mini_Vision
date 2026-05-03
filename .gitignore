@@ -1,4 +1,10 @@
 data/
 venv/
-.evn/__pycache__/
-src/utils/__pycache__/
+runs/
+models/
+__pycache__/
+**/__pycache__/
+*.pyc
+.env
+*.sync-conflict-*
+static/results/
